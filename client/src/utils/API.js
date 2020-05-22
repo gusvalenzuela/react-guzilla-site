@@ -16,5 +16,9 @@ export default {
   // Saves a Project to the database
   saveProject: function(ProjectData) {
     return axios.post("/api/projects", ProjectData);
+  },
+
+  getGitUpdateData: function(repo){
+    return axios.get(`https://api.github.com/repos/gusvalenzuela/${repo}/events`)
   }
 };

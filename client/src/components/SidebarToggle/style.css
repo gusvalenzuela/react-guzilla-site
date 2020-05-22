@@ -1,0 +1,17 @@
+.sidebar-toggle {
+    border: none;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  bottom: 50%;
+  background: #ffd900;
+  cursor: pointer;
+}
+.sidebar-toggle:hover {
+  background: #000000;
+  color: #ffd900;
+}
+.sidebar-toggle > .fa {
+  font-size: 28px;
+  padding: 4rem 0.5rem;
+}

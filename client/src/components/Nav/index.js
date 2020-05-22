@@ -1,59 +1,48 @@
 import React from "react";
+import "./style.css";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light">
-      <a className="navbar-brand" href="/">
-        Navbar
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <nav className="sidenavbar">
+      <ul className="navbar-nav mr-auto">
+        <li className="">
+          <a className="navbar-toggler" href="/">
+            home,
+          </a>
+        </li>
+        <li>
+          <a className="navbar-toggler" href="/portfolio">
+            portfolio,
+          </a>
+        </li>
+        <li>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#sidebarMoreContent"
+            aria-controls="sidebarMoreContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            contact...
+          </button>
+        </li>
+      </ul>
+      <div className="collapse navbar-collapse" id="sidebarMoreContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="/">
-              Home <span className="sr-only">(current)</span>
+            <a className="" href="mailto:gusrvalenzuela@gmail.com">
+              Email me
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/portfolio">
-              Portfolio
-            </a>
-          </li>
-          <li className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle"
-              href="/"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+              // className="navbar-toggler"
+              href="https://linkedin.com"
             >
-              Contact
+              <span className="fa fa-linkedin"></span>
             </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="mailto:gusrvalenzuela@gmail.com">
-                Email me 
-              </a>
-              <a className="dropdown-item" href="/">
-                LinkedIn
-              </a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="/contact">
-                more...
-              </a>
-            </div>
           </li>
         </ul>
       </div>

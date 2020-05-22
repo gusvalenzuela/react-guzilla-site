@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Portfolio from "./pages/Portfolio";
 import CMSprojects from "./pages/CMSprojects";
 import Homepage from "./pages/Homepage";
 import Sidebar from "react-sidebar";
+import SidebarToggle from "./components/SidebarToggle";
 
 function App() {
   const viewportMin = window.matchMedia(`(min-width: 768px)`);
-  const [sideNavDocked, setSideNavDocked] = useState(!viewportMin.matches);
+  const [sideNavOpen, setSideNavOpen] = useState(viewportMin.matches);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const listener = () => {
     setWindowWidth(window.innerWidth);
-    setSideNavDocked(!viewportMin.matches);
+    setSideNavOpen(viewportMin.matches);
   };
 
   useEffect(() => {
@@ -27,43 +27,45 @@ function App() {
 
   function handleOpeningSidebar(event) {
     // event.preventDefault();
-    if (!sideNavDocked) {
-      setSideNavDocked(true);
+    if (!sideNavOpen) {
+      setSideNavOpen(true);
     } else {
-      setSideNavDocked(false);
+      setSideNavOpen(false);
     }
   }
 
-  // console.log(viewportMin)
+  console.log(sideNavOpen);
+
   return (
     <Router>
       <div>
-        {/* <Nav /> */}
-        
+        <SidebarToggle handleOpeningSidebar={()=>handleOpeningSidebar()} />
         <Sidebar
-          sidebar={<b>Sidebar content</b>}
-          open={sideNavDocked}
-          docked={sideNavDocked}
-          // onSetOpen={true}
-          styles={{ sidebar: { background: "red" } }}
-        ></Sidebar>
-        <Switch>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
-          <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
-            <Portfolio handleOpeningSidebar={()=>handleOpeningSidebar()} />
-          </Route>
-          {/* <Route exact path="/cms/projects/:id">
+          sidebar={<Nav />}
+          // open={sideNavOpen}
+          onSetOpen={handleOpeningSidebar}
+          docked={sideNavOpen}
+          pullRight={true}
+          styles={{ sidebar: { background: "#fefefe" } }}
+        >
+          <Switch>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
+              <Portfolio />
+            </Route>
+            {/* <Route exact path="/cms/projects/:id">
             <Detail />
           </Route> */}
-          <Route exact path="/cms/projects">
-            <CMSprojects />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
-        </Switch>
+            <Route exact path="/cms/projects">
+              <CMSprojects />
+            </Route>
+            <Route>
+              <NoMatch />
+            </Route>
+          </Switch>
+        </Sidebar>
       </div>
     </Router>
   );

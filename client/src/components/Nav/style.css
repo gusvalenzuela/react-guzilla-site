@@ -1,0 +1,11 @@
+.navbar-nav a {
+  color: #030303 ;
+}
+.sidenavbar{
+  color: #030303;
+  width: 250px;
+  background: transparent;
+}
+.sidenavbar li{
+  margin: .5rem 0;
+}
