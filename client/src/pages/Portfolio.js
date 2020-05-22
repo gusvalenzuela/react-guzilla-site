@@ -3,6 +3,7 @@ import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Card from "../components/Card";
+import localProjects from "../utils/localProjects.json"
 
 function Projects({ handleOpeningSidebar }) {
   // let update =
@@ -21,6 +22,12 @@ function Projects({ handleOpeningSidebar }) {
   useEffect(() => {
     loadProjects();
   }, []);
+
+  function handleSeed(){
+    localProjects.forEach(i=>{
+      API.saveProject(i)
+    })
+  }
 
   useEffect(() => {
     console.log(updateTimer);
@@ -46,7 +53,10 @@ function Projects({ handleOpeningSidebar }) {
               </a>
             ))
           ) : (
-            <h3>No Results to Display</h3>
+            <div>
+              <h3>No Results to Display</h3>
+              <button onClick={()=>{handleSeed()}}>SEED ME</button>
+            </div>
           )}
         </Col>
       </Row>
