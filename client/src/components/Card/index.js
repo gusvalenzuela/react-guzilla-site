@@ -3,17 +3,16 @@ import "./style.css";
 
 // Exporting the Card Body, Card Image, and Card Overlay components from this file
 
-function Card({ keyz, imgSrc, children }) {
+function Card({imgSrc, children }) {
   return (
     <div
-      key={keyz ? keyz : Date.now()}
-      className="card bg-dark text-white rounded-0"
+      className="card"
     >
       <img
         className="card-img"
         src={`./assets/images/${imgSrc ? imgSrc : "defaultimage01.jpg"}`}
         alt="Serene stock background"
-        style={{ maxHeight: 450 }}
+        style={{ minHeight: 400 }}
       />
       <div className="card-img-overlay">{children}</div>
     </div>

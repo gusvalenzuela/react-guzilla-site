@@ -37,18 +37,22 @@ function Portfolio({ handleOpeningSidebar }) {
 
   return (
     <div role="main" className="container-fluid p-0 h-100">
-      <Row className="row justify-content-end m-0">
+      <Row className="row justify-content-start m-0">
         <Col size="lg-7" style={{ padding: 0 }}>
           {projects.length ? (
             projects.map((Project, index) => (
               // card requires a key [has default image src "defaultimage01.jpg" if none given]
-              <a key={index} href={Project.app_url}>
-                <Card imgSrc={Project.img_src}>
-                  <h5 className="card-title">{Project.title}</h5>
-                  <p className="card-text">{Project.lead}</p>
-                  <p className="card-text">Last updated 1 week ago</p>
-                </Card>
-              </a>
+              <Card key={index} imgSrc={Project.img_src}>
+                <h3>{Project.title}</h3>
+                <p>{Project.lead}</p>
+                <p>Last updated 1 week ago</p>
+                <a href={Project.app_url}>
+                  <i className="fa fa-chevron-right"> app</i>
+                </a>
+                <a href={Project.repo_url}>
+                  <i className="fa fa-github"> source code</i>
+                </a>
+              </Card>
             ))
           ) : (
             <div>
