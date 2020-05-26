@@ -7,6 +7,7 @@ import CMSprojects from "./pages/CMSprojects";
 import Homepage from "./pages/Homepage";
 import Sidebar from "react-sidebar";
 import SidebarToggle from "./components/SidebarToggle";
+import Head from "./components/Head";
 
 function App() {
   const viewportMin = window.matchMedia(`(min-width: 768px)`);
@@ -34,20 +35,19 @@ function App() {
     }
   }
 
-  console.log(sideNavOpen);
-
   return (
     <Router>
       <div>
-        <SidebarToggle handleOpeningSidebar={()=>handleOpeningSidebar()} />
+        <SidebarToggle handleOpeningSidebar={() => handleOpeningSidebar()} />
         <Sidebar
           sidebar={<Nav />}
-          // open={sideNavOpen}
+          open={false}
           onSetOpen={handleOpeningSidebar}
           docked={sideNavOpen}
           pullRight={true}
           styles={{ sidebar: { background: "#fefefe" } }}
         >
+          <Head />
           <Switch>
             <Route exact path="/">
               <Homepage />

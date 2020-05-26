@@ -19,6 +19,7 @@ export default {
   },
 
   getGitUpdateData: function(repo){
-    return axios.get(`https://api.github.com/repos/gusvalenzuela/${repo}/events`)
+    return axios.get(`https://api.github.com/users/gusvalenzuela/repos`)
+    // return axios.get(`https://api.github.com/users/gusvalenzuela/${repo}/events`)
   }
 };
