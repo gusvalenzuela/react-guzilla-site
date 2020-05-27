@@ -9,10 +9,10 @@ function Homepage() {
         <Row>
           <Col style={{ clear: "both", padding: "0" }}>
             <Jumbotron>
-              <h1>Welcome to my new, NEW site</h1>
+              <h1>Welcome to my site, have a look around</h1>
               <h1>
                 <span
-                  style={{ fontSize: "7rem", transform: "scaleX(-1)" }}
+                  style={{ fontSize: "7rem" }}
                   role="img"
                   aria-label="Face With Rolling Eyes Emoji"
                 >

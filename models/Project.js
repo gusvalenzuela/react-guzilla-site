@@ -7,9 +7,12 @@ const ProjectSchema = new Schema({
     type: String,
     default: "App image",
   },
+  ranking: {
+    type: Number,
+  },
   version: {
     type: String,
-    default:`1.0.0`,
+    default: `1.0.0`,
   },
   lead: {
     type: String,

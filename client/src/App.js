@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Portfolio from "./pages/Portfolio";
-import CMSprojects from "./pages/CMSprojects";
 import Homepage from "./pages/Homepage";
 import Sidebar from "react-sidebar";
 import SidebarToggle from "./components/SidebarToggle";
@@ -58,9 +57,6 @@ function App() {
             {/* <Route exact path="/cms/projects/:id">
             <Detail />
           </Route> */}
-            <Route exact path="/cms/projects">
-              <CMSprojects />
-            </Route>
             <Route>
               <NoMatch />
             </Route>

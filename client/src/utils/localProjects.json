@@ -1,6 +1,7 @@
 [
   {
     "title": "Password Generator",
+    "ranking": 3,
     "version": "1.2.1",
     "lead": "A simple string generator with user options",
     "libraries": "JS, HTML, CSS",
@@ -13,6 +14,7 @@
   },
   {
     "title": "Hungry Hip-Po's",
+    "ranking": 4,
     "version": "1.11.23",
     "lead": "A grocery list builder from recipe search. Search by cuisine, ingredient, or meal.",
     "libraries": "JS, HTML, CSS",
@@ -25,6 +27,7 @@
   },
   {
     "title": "Gooder Burger",
+    "ranking": 5,
     "version": "3.0.10",
     "lead": "An app that dynamically uses Node.js (w/ Express & Handlebars) and mySQL to virtually create burgers and move them from uneaten to eaten lists.",
     "libraries": "NodeJS, Handlebars, MySQL, CSS",
@@ -37,6 +40,7 @@
   },
   {
     "title": "QuizDown⁉",
+    "ranking": 1,
     "version": "5.0.0",
     "lead": "A timed quiz game with multiple quizzes to choose from.",
     "libraries": "JS, HTML, CSS",
@@ -48,7 +52,34 @@
     "omit": false
   },
   {
+    "title": "Employee Yellow Pages",
+    "ranking": 6,
+    "version": "0.8.2",
+    "lead": "Simple employee directory created with ReactJS. Given a directory of employees, a user may sort, search, and filter to quickly access employee information.",
+    "libraries": "React, JS/JSX, HTML, CSS",
+    "description": "",
+    "app_url": "https://confident-goodall-b01ec7.netlify.app/",
+    "repo_url": "https://github.com/gusvalenzuela/employee-yellow-pages-app",
+    "img_src": "employee-yp-1.jpg",
+    "img_alt": "Screenshot of EYP application",
+    "omit": false
+  },
+    {
+    "title": "Weather App",
+    "ranking": 8,
+    "version": "1.0.0",
+    "lead": "Web application for searching cities and displaying their weather data.",
+    "libraries": "JS, jQuery, HTML, CSS",
+    "description": "",
+    "app_url": "https://gusvalenzuela.github.io/weather-youLikeIt-orNot/",
+    "repo_url": "https://github.com/gusvalenzuela/weather-youLikeIt-orNot",
+    "img_src": "weather-app-1.jpg",
+    "img_alt": "Screenshot of Weather Application",
+    "omit": false
+  },
+  {
     "title": "artGarden",
+    "ranking": 2,
     "version": "0.33.4",
     "lead": "A site where users can make requests for artworks to be made and other users can make a proposal to fulfill that request.",
     "libraries": "NodeJS, Handlebars, MySQL, CSS",

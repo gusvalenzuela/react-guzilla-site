@@ -3,16 +3,14 @@ import "./style.css";
 
 // Exporting the Card Body, Card Image, and Card Overlay components from this file
 
-function Card({imgSrc, children }) {
+function Card({height, imgSrc, children }) {
   return (
-    <div
-      className="card"
-    >
+    <div className="card col-12 col-md-6 col-lg-4">
       <img
-        className="card-img"
+        className="card-image"
         src={`./assets/images/${imgSrc ? imgSrc : "defaultimage01.jpg"}`}
         alt="Serene stock background"
-        style={{ minHeight: 400 }}
+        style={height ? { height: height } : { minHeight: 400 }}
       />
       <div className="card-img-overlay">{children}</div>
     </div>

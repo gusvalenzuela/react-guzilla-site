@@ -1,7 +1,9 @@
-.jumbotronskiez{
+.head {
+  margin: auto;
   z-index: 7;
+  padding: 100px 1rem 0;
+  text-align: right;
   background: #070707;
   color: #05ff02;
-  margin: auto;
-  height: 2.3rem;
+  min-height: 142px;
 }
