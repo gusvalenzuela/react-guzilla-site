@@ -3,17 +3,19 @@ import "./style.css";
 
 function ResumeCard() {
   return (
-    <div className="card resume-card col-12 col-lg-4">
+    <div className="card resume-card col-12 col-md-6 col-xl-4">
       <ul>
-        <li></li>
-        <a
-          class=""
-          href="./GustavoValenzuela_resume-2020.pdf"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <span class="fa fa-file-pdf-o"></span> Resume
-        </a>
+        <li>
+          <a
+            class=""
+            href="./GustavoValenzuela_resume-2020.pdf"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span class="fa fa-file-pdf-o"></span> Resume
+          </a>
+        </li>
+
         <li>
           <a
             class=""

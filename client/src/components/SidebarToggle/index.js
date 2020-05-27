@@ -3,11 +3,14 @@ import "./style.css";
 
 // This file exports the Input, TextArea, and FormBtn components
 
-function SidebarToggle({ handleOpeningSidebar }) {
+function SidebarToggle({ isOpen, handleOpeningSidebar }) {
   return (
-    <button className="sidebar-toggle" onClick={() => handleOpeningSidebar()}>
-      <i className="fa fa-arrow-left" ></i>
-    </button>
+    <button
+      className={`sidebar-toggle ${
+        !isOpen ? "sidebar-closed" : "sidebar-opened"
+      }`}
+      onClick={() => handleOpeningSidebar()}
+    ></button>
   );
 }
 

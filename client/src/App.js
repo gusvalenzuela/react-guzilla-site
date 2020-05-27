@@ -37,27 +37,26 @@ function App() {
   return (
     <Router>
       <div>
-        <SidebarToggle handleOpeningSidebar={() => handleOpeningSidebar()} />
         <Sidebar
           sidebar={<Nav />}
           open={false}
           onSetOpen={handleOpeningSidebar}
           docked={sideNavOpen}
           pullRight={true}
-          styles={{ sidebar: { background: "#fefefe" } }}
+          styles={{ sidebar: { background: "#eeeeee" } }}
         >
-          <Head />
+          <SidebarToggle isOpen={sideNavOpen} handleOpeningSidebar={() => handleOpeningSidebar()} />
           <Switch>
             <Route exact path="/">
+              <Head textContent="HOME" />
               <Homepage />
             </Route>
             <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
+              <Head textContent="PORTFOLIO" />
               <Portfolio />
             </Route>
-            {/* <Route exact path="/cms/projects/:id">
-            <Detail />
-          </Route> */}
             <Route>
+              <Head textContent="Uh Oh, 404!" />
               <NoMatch />
             </Route>
           </Switch>

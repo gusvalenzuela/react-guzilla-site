@@ -1,14 +1,21 @@
 .navbar-nav a {
-  color: #030303 ;
-}
-.sidenavbar{
   color: #030303;
-  width: 250px;
+}
+.sidenavbar {
+  color: #030303;
   background: transparent;
+  width: auto;
+  padding-right: 3.687rem;
 }
-.sidenavbar li{
-  margin: .5rem 0;
+.sidenavbar li {
+  margin: 0.5rem 0;
 }
-div[role=navigation]{
+div[role="navigation"] {
   margin: 0;
 }
+/* 
+@media screen and (max-width: 576px){
+  .sidenavbar {
+    width: 150px;
+  }
+} */

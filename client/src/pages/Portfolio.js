@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
+import "./mainstyle.css";
 // import { Link } from "react-router-dom";
 import { Row } from "../components/Grid";
 import Card from "../components/Card";
@@ -8,8 +9,6 @@ import Foot from "../components/Foot";
 import ResumeCard from "../components/ResumeCard";
 
 function Portfolio({ handleOpeningSidebar }) {
-  // let update =
-
   // Setting our component's initial state
   const [projects, setProjects] = useState([]);
 

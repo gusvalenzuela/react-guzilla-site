@@ -1,11 +1,28 @@
 .sidebar-toggle {
-    border: none;
-  position: fixed;
+  border: none;
+  position: absolute;
   z-index: 99;
   right: 0;
-  bottom: 50%;
+  bottom: 150;
   background: #ffd900;
   cursor: pointer;
+  padding: 2.254rem 0.25rem;
+  outline-color: transparent !important;
+  border-top: 1px outset #ffffff44;
+  border-bottom: 1px outset #ffffff44;
+  border-left: 1px outset #ffffff44;
+  transition: "left .3s ease-out, right .3s ease-out";
+}
+.sidebar-closed,
+.sidebar-opened {
+  clear: both;
+  font-size: xx-large;
+}
+.sidebar-closed::after {
+  content: "◀";
+}
+.sidebar-opened::after {
+  content: "▶";
 }
 .sidebar-toggle:hover {
   background: #000000;

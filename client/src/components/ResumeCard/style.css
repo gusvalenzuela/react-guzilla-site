@@ -1,6 +1,15 @@
 .resume-card {
-  background-color: #ffd900;
+  background-color: #ffffff;
+  font-size: 18px;
+  flex-direction: column !important;
+}
+.resume-card a {
+  color: #000000;
 }
 .resume-card li {
   list-style: none;
+  padding: 1rem 0;
+}
+.resume-card ul {
+  padding-left: 1rem;
 }

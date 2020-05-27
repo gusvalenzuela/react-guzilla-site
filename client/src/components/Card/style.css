@@ -6,14 +6,10 @@
   color: #ffffff;
   text-shadow: 1px 1px #070707;
   /* padding-right: 50%; */
-  background: #e6e6e636;
+  background: #00000060;
   margin: 0;
   margin-top: 42%;
   top: auto !important;
-}
-
-.card-image {
-  width: auto;
 }
 
 .card {
@@ -21,8 +17,8 @@
   border: 1px transparent !important;
   padding: 0;
 }
-.card img{
-   width: 100%;
+.card img {
+  width: 100%;
 }
 .card-img-overlay i {
   color: #ffd900;

@@ -5,7 +5,7 @@ import "./style.css";
 
 function Card({height, imgSrc, children }) {
   return (
-    <div className="card col-12 col-md-6 col-lg-4">
+    <div className="card col-12 col-md-6 col-xl-4">
       <img
         className="card-image"
         src={`./assets/images/${imgSrc ? imgSrc : "defaultimage01.jpg"}`}

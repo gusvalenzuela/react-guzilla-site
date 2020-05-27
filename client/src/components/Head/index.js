@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function Head() {
+function Head({ textContent }) {
   return (
     <div className="head">
-      <h1>Gus Valenzuela</h1>
+      <h1 style={{ margin: 0, paddingBottom: "1rem" }}>{textContent}</h1>
     </div>
   );
 }
