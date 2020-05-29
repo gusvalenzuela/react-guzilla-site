@@ -7,53 +7,53 @@ function ResumeCard() {
       <ul>
         <li>
           <a
-            class=""
+            className=""
             href="./GustavoValenzuela_resume-2020.pdf"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span class="fa fa-file-pdf-o"></span> Resume
+            <span className="fa fa-file-pdf-o"></span> Resume
           </a>
         </li>
 
         <li>
           <a
-            class=""
+            className=""
             href="https://github.com/gusvalenzuela"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span class="fa fa-github"></span> GitHub Profile
+            <span className="fa fa-github"></span> GitHub Profile
           </a>
         </li>
         <li>
           <a
-            class=""
+            className=""
             href="https://www.linkedin.com/in/gus-valenzuela-b73b0296/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span class="fa fa-linkedin"></span> LinkedIn Profile
+            <span className="fa fa-linkedin"></span> LinkedIn Profile
           </a>
         </li>
         <li>
           <a
-            class=""
+            className=""
             href="mailto:gusrvalenzuela@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span class="fa fa-envelope-o"></span> gusrvalenzuela@gmail.com
+            <span className="fa fa-envelope-o"></span> gusrvalenzuela@gmail.com
           </a>
         </li>
         <li>
           <a
-            class=""
+            className=""
             href="tel:+1-714-742-7119"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span class="fa fa-phone"></span> 714.742.7119
+            <span className="fa fa-phone"></span> 714.742.7119
           </a>
         </li>
       </ul>

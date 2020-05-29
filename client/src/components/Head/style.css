@@ -1,12 +1,11 @@
 .head {
   margin: auto;
   z-index: 7;
-  padding: 100px 1rem 0;
+  padding: 100px 3rem 0 1rem;
   text-align: right;
   background: #070707;
   color: #ffffffff;
   min-height: 142px;
-  padding-right: 2.75rem;
 }
 .head::before {
   content: "guzilla //";

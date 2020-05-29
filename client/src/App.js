@@ -7,11 +7,13 @@ import Homepage from "./pages/Homepage";
 import Sidebar from "react-sidebar";
 import SidebarToggle from "./components/SidebarToggle";
 import Head from "./components/Head";
+import "./pages/mainstyle.css";
 
 function App() {
   const viewportMin = window.matchMedia(`(min-width: 768px)`);
   const [sideNavOpen, setSideNavOpen] = useState(viewportMin.matches);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [smallScreen, setSmallScreen] = useState(!viewportMin.matches);
 
   const listener = () => {
     setWindowWidth(window.innerWidth);
@@ -19,14 +21,19 @@ function App() {
   };
 
   useEffect(() => {
+    // true = bigger than selected min-width
+    // if display size is < 768px
+    if (!viewportMin.matches) {
+      setSmallScreen(true);
+      console.log(smallScreen);
+    } else {
+      setSmallScreen(false);
+      console.log(smallScreen);
+    }
     window.addEventListener("resize", listener);
-    return () => {
-      window.removeEventListener("resize", listener);
-    };
   }, [windowWidth]);
 
-  function handleOpeningSidebar(event) {
-    // event.preventDefault();
+  function handleOpeningSidebar() {
     if (!sideNavOpen) {
       setSideNavOpen(true);
     } else {
@@ -39,13 +46,17 @@ function App() {
       <div>
         <Sidebar
           sidebar={<Nav />}
-          open={false}
+          open={smallScreen ? sideNavOpen : false}
           onSetOpen={handleOpeningSidebar}
-          docked={sideNavOpen}
+          docked={smallScreen ? false : sideNavOpen}
           pullRight={true}
           styles={{ sidebar: { background: "#eeeeee" } }}
         >
-          <SidebarToggle isOpen={sideNavOpen} handleOpeningSidebar={() => handleOpeningSidebar()} />
+          <SidebarToggle
+            isOpen={sideNavOpen}
+            smallScreen={smallScreen}
+            handleOpeningSidebar={() => handleOpeningSidebar()}
+          />
           <Switch>
             <Route exact path="/">
               <Head textContent="HOME" />
