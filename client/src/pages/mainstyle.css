@@ -1,7 +1,9 @@
 body{
-    background: #000000;
+    background: #020202;
 }
 
 :root{
-    --main-red: #e03011,
+    --main-black: #020202;
+    --main-blue: #003cff;
+    --main-red: #e03011;
 }

@@ -1,10 +1,10 @@
 .resume-card {
-  background-color: #ffffff;
+  background-color: var(--main-black);
   font-size: 18px;
   flex-direction: column !important;
 }
 .resume-card a {
-  color: #000000;
+  color: #fff;
 }
 .resume-card li {
   list-style: none;

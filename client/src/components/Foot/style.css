@@ -8,11 +8,45 @@ body {
   margin-bottom: 60px; /* Margin bottom by footer height */
 }
 .footer {
+  background: var(--main-black);
+  box-shadow: 0 -5px 5px -5px rgb(0, 0, 0);
+  padding: 1em 1em 2.25em;
+  height: 7.063rem;
+  margin-top: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: relative;
   bottom: 0;
-  width: 100%;
-  margin-top: 60px;
-  height: 160px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #000000;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.footer-left {
+  color: white;
+}
+.menu.simple{
+  list-style: none;
+  display: flex;
+}
+
+.footer .footer-icons li:last-of-type {
+  margin-right: 0;
+}
+
+.footer .footer-icons .fa {
+  font-size: 1.5em;
+  color: #fefefe;
+}
+
+.footer .footer-icons .fa:hover {
+  color: #4a4a4a;
+  transition: color 0.3s ease-in;
 }

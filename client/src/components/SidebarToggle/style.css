@@ -5,7 +5,7 @@
   margin-right: 0em;
   right: 0;
   top: 80px;
-  background: #e03011;
+  background: var(--main-red);
   cursor: pointer;
   padding: 3.145rem 0.5rem 3.145rem .25rem;
   outline-color: transparent !important;
@@ -25,8 +25,8 @@
   content: "▶";
 }
 .sidebar-toggle:hover {
-  background: #000000;
-  color: #e03011;
+  background: var(--main-black);
+  color: var(--main-red);
 }
 .sidebar-toggle > .fa {
   font-size: 28px;

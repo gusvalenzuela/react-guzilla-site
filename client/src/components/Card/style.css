@@ -22,7 +22,7 @@
 
 .card-img-overlay {
   color: #ffffff;
-  text-shadow: 1px 1px #070707;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, .5);
   /* padding-right: 50%; */
   background: #020202aa;
   margin: 0;

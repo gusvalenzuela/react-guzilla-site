@@ -4,7 +4,13 @@
 .sidenavbar {
   color: #030303;
   background: transparent;
-  width: auto;
+  background: url("../../images/godzilla-2-b.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 100%;
+  height: 100%;
+  z-index: -9;
   padding-right: 3.687rem;
 }
 .sidenavbar li {
