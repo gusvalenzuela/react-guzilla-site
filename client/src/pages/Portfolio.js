@@ -11,6 +11,7 @@ import ResumeCard from "../components/ResumeCard";
 function Portfolio({ handleOpeningSidebar }) {
   // Setting our component's initial state
   const [projects, setProjects] = useState([]);
+  const [repoNames, setRepoNames] = useState([])
 
   // Loads all Projects and sets them to Projects
   function loadProjects() {
@@ -21,9 +22,19 @@ function Portfolio({ handleOpeningSidebar }) {
   // Load all Projects and store them with setProjects
   useEffect(() => {
     loadProjects();
+
+    const repo = localProjects.map(i => {
+      let temp = i.repo_url.split(`/`)
+      return temp[temp.length - 1]
+    })
+
+    setRepoNames(repo)
+
     API.getGitUpdateData().then((gitData) => {
       gitData.data.forEach((item) => {
-        // console.log(`${item.name}\r\n last updated ${item.updated_at}`);
+
+        // if(item.name === Project.repo_url)
+        console.log(`${item.name}\r\n last updated ${item.updated_at}`);
       });
     });
   }, []);
@@ -33,33 +44,35 @@ function Portfolio({ handleOpeningSidebar }) {
       <Row className="row justify-content-end m-0">
         {projects.length
           ? projects.map((Project, index) => (
-              // card requires a key [has default image src "defaultimage01.jpg" if none given]
-              <Card key={index} imgSrc={Project.img_src}>
-                <h3>{Project.title}</h3>
-                <p>{Project.lead}</p>
-                <p>Last updated 1 week ago</p>
-                <a href={Project.app_url}>
-                  <i className="fa fa-chevron-right"> app</i>
-                </a>
-                <a href={Project.repo_url}>
-                  <i className="fa fa-github"> source code</i>
-                </a>
-              </Card>
-            ))
+            // card requires a key [has default image src "defaultimage01.jpg" if none given]
+            <Card key={index} imgSrc={Project.img_src}>
+              <h3>{Project.title}</h3>
+              <p style={{ fontSize: "14px" }}>{Project.libraries}</p>
+              <p>{Project.lead}</p>
+              <p>Last updated {Project.updated_at}</p>
+              <a href={Project.app_url}>
+                <i className="fa fa-chevron-right"> app</i>
+              </a>
+              <a href={Project.repo_url}>
+                <i className="fa fa-github"> source code</i>
+              </a>
+            </Card>
+          ))
           : localProjects.map((Project, index) => (
-              // card requires a key [has default image src "defaultimage01.jpg" if none given]
-              <Card key={index} imgSrc={Project.img_src}>
-                <h3>{Project.title}</h3>
-                <p>{Project.lead}</p>
-                <p>Last updated 1 week ago</p>
-                <a href={Project.app_url}>
-                  <i className="fa fa-chevron-right"> app</i>
-                </a>
-                <a href={Project.repo_url}>
-                  <i className="fa fa-github"> source code</i>
-                </a>
-              </Card>
-            ))}
+            // card requires a key [has default image src "defaultimage01.jpg" if none given]
+            <Card key={index} imgSrc={Project.img_src}>
+              <h3>{Project.title}</h3>
+              <p style={{ fontSize: "14px", fontWeight: "200" }}>{Project.libraries}</p>
+              <p>{Project.lead}</p>
+              <p>Last updated {Project.updated_at}</p>
+              <a href={Project.app_url}>
+                <i className="fa fa-chevron-right"> app</i>
+              </a>
+              <a href={Project.repo_url}>
+                <i className="fa fa-github"> source code</i>
+              </a>
+            </Card>
+          ))}
         <ResumeCard />
       </Row>
       <Foot />

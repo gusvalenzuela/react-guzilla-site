@@ -25,10 +25,8 @@ function App() {
     // if display size is < 768px
     if (!viewportMin.matches) {
       setSmallScreen(true);
-      console.log(smallScreen);
     } else {
       setSmallScreen(false);
-      console.log(smallScreen);
     }
     window.addEventListener("resize", listener);
   }, [windowWidth]);
