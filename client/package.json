@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "moment": "^2.26.0",
+    "octonode": "^0.9.5",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.1.2",
