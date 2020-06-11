@@ -32,7 +32,7 @@ body {
 .footer-left {
   color: white;
 }
-.menu.simple{
+.menu.simple {
   list-style: none;
   display: flex;
 }
