@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3008/",
   "dependencies": {
     "axios": "^0.18.0",
+    "moment": "^2.26.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.1.2",
