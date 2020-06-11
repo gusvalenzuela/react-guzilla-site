@@ -47,7 +47,7 @@ function Portfolio({ handleOpeningSidebar }) {
               <h3>{Project.title}</h3>
               <p style={{ fontSize: "14px" }}>{Project.libraries}</p>
               <p>{Project.lead}</p>
-              <p>Last updated {`${moment("2011-01-26T19:14:43Z").calendar()}`}</p>
+              <p>Last updated {`${moment(Project.updated_at).calendar()}`}</p>
               <a href={Project.app_url}>
                 <i className="fa fa-chevron-right"> app</i>
               </a>
