@@ -8,7 +8,7 @@ function ResumeCard() {
         <li>
           <a
             className=""
-            href="./GustavoValenzuela_resume-2020.pdf"
+            href="https://drive.google.com/file/d/1BAKRO71SHDIP6wDSVzL1A7WOHWOJBcJj/view?usp=sharing"
             rel="noopener noreferrer"
             target="_blank"
           >
