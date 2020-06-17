@@ -18,7 +18,7 @@ function Nav() {
         <li>
           <a className="navbar-togglerz" data-toggle="collapse"
             data-target="#sidebarMoreContent"
-            aria-controls="sidebarMoreContent" href="/portfolio">
+            aria-controls="sidebarMoreContent" href="/">
             contact,
           </a>
         </li>
@@ -26,7 +26,7 @@ function Nav() {
           <ul className="navbar-contact-dropdown">
             <li>
               <a href="mailto:gusrvalenzuela@gmail.com">
-                <span className="fa fa-envelope"></span>gusrvalenzuela@gmail.com
+                <span className="fa fa-envelope"></span> gusrvalenzuela@gmail.com
             </a>
             </li>
             <li>
@@ -41,6 +41,11 @@ function Nav() {
             </li>
           </ul>
         </div>
+        <li>
+          <a className="navbar-togglerz"  href="/other">
+            other.
+          </a>
+        </li>
       </ul>
 
     </nav>
