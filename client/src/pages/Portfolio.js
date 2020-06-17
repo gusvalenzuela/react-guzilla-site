@@ -15,27 +15,34 @@ function Portfolio() {
   // Loads all Projects and sets them to Projects
   function loadProjects() {
     API.getProjects()
-      .then((res) => setProjects(res.data))
+      .then((res) => {
+        if (!res.data || res.data.length < 1) {
+          res.data = localProjects
+        }
+        loadGithubData(res.data)
+      })
       .catch((err) => console.log(err));
+
+  }
+  function loadGithubData(data) {
+    API.getGitUpdateData().then((gitData) => {
+      gitData.data.forEach((item) => {
+        data.forEach((proj) => {
+          if (proj.repo_name === item.name) {
+            proj.updated_at = item.updated_at
+            // console.log(`${item.name}\r\n last updated ${item.updated_at}`);
+          }
+        });
+      });
+      setProjects(data)
+    });
   }
   // Load all Projects and store them with setProjects
   useEffect(() => {
     loadProjects();
 
-    API.getGitUpdateData().then((gitData) => {
-      gitData.data.forEach((item) => {
-        projects.forEach((proj) => {
-          if (proj.repo_name === item.name) {
-            proj.updated_at = item.updated_at
-            console.log(`${item.name}\r\n last updated ${item.updated_at}`);
-          }
-        });
-
-        // setProjects(projects)
-      });
-    });
-
   }, []);
+
 
   return (
     <div role="main" className="container-fluid p-0 h-100">
@@ -47,7 +54,7 @@ function Portfolio() {
               <h3>{Project.title}</h3>
               <p style={{ fontSize: "14px" }}>{Project.libraries}</p>
               <p>{Project.lead}</p>
-              {/* <p>Last updated {`${moment(Project.updated_at).calendar()}`}</p> */}
+              <p>Last updated {moment(Project.updated_at).calendar()}</p>
               <a href={Project.app_url}>
                 <i className="fa fa-chevron-right"> app</i>
               </a>
@@ -56,23 +63,7 @@ function Portfolio() {
               </a>
             </Card>
           ))
-          : localProjects.map((Project, index) => (
-            // card requires a key [has default image src "defaultimage01.jpg" if none given]
-            <Card key={index} imgSrc={Project.img_src}>
-              <h3>{Project.title}</h3>
-              <p style={{ fontSize: "14px", fontWeight: "200" }}>
-                {Project.libraries}
-              </p>
-              <p>{Project.lead}</p>
-              <p>Last updated {`${moment(Project.updated_at).calendar()}`}</p>
-              <a href={Project.app_url}>
-                <i className="fa fa-chevron-right"> app</i>
-              </a>
-              <a href={Project.repo_url}>
-                <i className="fa fa-github"> source code</i>
-              </a>
-            </Card>
-          ))}
+          : ""}
         <ResumeCard />
       </Row>
       <Foot />
