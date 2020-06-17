@@ -1,6 +1,26 @@
-.navbar-nav a {
+.navbar-nav * {
+  color: #030303;
+  text-shadow: 1px 1px #ffffff;
+}
+
+.navbar-togglerz {
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.navbar-contact-dropdown {
+  color: #030303;
+  list-style: none;
+  padding-left: 1.25rem;
+}
+
+.navbar-contact-dropdown a {
   color: #030303;
 }
+
 .sidenavbar {
   color: #030303;
   background: transparent;
@@ -13,12 +33,16 @@
   z-index: -9;
   padding-right: 3.687rem;
 }
+
 .sidenavbar li {
   margin: 0.5rem 0;
+  text-shadow: 1px 1px #ffffff;
 }
+
 div[role="navigation"] {
   margin: 0;
 }
+
 /* 
 @media screen and (max-width: 576px){
   .sidenavbar {

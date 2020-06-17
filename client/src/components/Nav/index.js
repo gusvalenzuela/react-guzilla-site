@@ -6,46 +6,43 @@ function Nav() {
     <nav className="sidenavbar">
       <ul className="navbar-nav mr-auto">
         <li className="">
-          <a className="navbar-toggler" href="/">
+          <a className="navbar-togglerz" href="/">
             home,
           </a>
         </li>
         <li>
-          <a className="navbar-toggler" href="/portfolio">
+          <a className="navbar-togglerz" href="/portfolio">
             portfolio,
           </a>
         </li>
         <li>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
+          <a className="navbar-togglerz" data-toggle="collapse"
             data-target="#sidebarMoreContent"
-            aria-controls="sidebarMoreContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            contact...
-          </button>
+            aria-controls="sidebarMoreContent" href="/portfolio">
+            contact,
+          </a>
         </li>
+        <div className="collapse navbar-collapse" id="sidebarMoreContent">
+          <ul className="navbar-contact-dropdown">
+            <li>
+              <a href="mailto:gusrvalenzuela@gmail.com">
+                <span className="fa fa-envelope"></span>gusrvalenzuela@gmail.com
+            </a>
+            </li>
+            <li>
+              <a
+
+                href="tel:+1-714-742-7119"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span className="fa fa-phone"></span> 714.742.7119
+          </a>
+            </li>
+          </ul>
+        </div>
       </ul>
-      <div className="collapse navbar-collapse" id="sidebarMoreContent">
-        <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <a className="" href="mailto:gusrvalenzuela@gmail.com">
-              Email me
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              // className="navbar-toggler"
-              href="https://linkedin.com"
-            >
-              <span className="fa fa-linkedin"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
+
     </nav>
   );
 }

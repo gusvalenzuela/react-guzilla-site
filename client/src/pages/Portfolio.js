@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment"
-import github from "octonode"
 import API from "../utils/API";
 import "./mainstyle.css";
 import { Row } from "../components/Grid";
@@ -8,9 +7,8 @@ import Card from "../components/Card";
 import localProjects from "../utils/localProjects.json";
 import Foot from "../components/Foot";
 import ResumeCard from "../components/ResumeCard";
-const ghclient = github.client()
 
-function Portfolio({ handleOpeningSidebar }) {
+function Portfolio() {
   // Setting our component's initial state
   const [projects, setProjects] = useState([]);
 
@@ -24,24 +22,18 @@ function Portfolio({ handleOpeningSidebar }) {
   useEffect(() => {
     loadProjects();
 
-    let repo = ghclient.repo(`gusvalenzuela/quiz-game`)
+    API.getGitUpdateData().then((gitData) => {
+      gitData.data.forEach((item) => {
+        projects.forEach((proj) => {
+          if (proj.repo_name === item.name) {
+            proj.updated_at = item.updated_at
+            console.log(`${item.name}\r\n last updated ${item.updated_at}`);
+          }
+        });
 
-    repo.info((data) => {
-      console.log(data)
-    })
-
-    // API.getGitUpdateData().then((gitData) => {
-    //   gitData.data.forEach((item) => {
-    //     projects.forEach((proj) => {
-    //       if (proj.repo_name === item.name) {
-    //         proj.updated_at = item.updated_at
-    //         console.log(`${item.name}\r\n last updated ${item.updated_at}`);
-    //       }
-    //     });
-
-    //     setProjects(projects)
-    //   });
-    // });
+        // setProjects(projects)
+      });
+    });
 
   }, []);
 
