@@ -55,10 +55,12 @@ function Portfolio() {
               <p style={{ fontSize: "14px" }}>{Project.libraries}</p>
               <p>{Project.lead}</p>
               <p>Last updated {moment(Project.updated_at).calendar()}</p>
-              <a href={Project.app_url}>
+              <a href={Project.app_url} rel="noopener noreferrer"
+                target="_blank">
                 <i className="fa fa-chevron-right"> app</i>
               </a>
-              <a href={Project.repo_url}>
+              <a href={Project.repo_url} rel="noopener noreferrer"
+                target="_blank">
                 <i className="fa fa-github"> source code</i>
               </a>
             </Card>

@@ -8,7 +8,7 @@ function ResumeCard() {
         <li>
           <a
             className=""
-            href="https://drive.google.com/file/d/1BAKRO71SHDIP6wDSVzL1A7WOHWOJBcJj/view?usp=sharing"
+            href="https://drive.google.com/file/d/1F_RtnqvrH93quvB6M5_1z9yizipZZyzp/view?usp=sharing"
             rel="noopener noreferrer"
             target="_blank"
           >

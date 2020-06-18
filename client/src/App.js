@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Sidebar from "react-sidebar";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
 import Portfolio from "./pages/Portfolio";
 import Homepage from "./pages/Homepage";
-import Sidebar from "react-sidebar";
+import Other from "./pages/Other"
+import Nav from "./components/Nav";
 import SidebarToggle from "./components/SidebarToggle";
 import Head from "./components/Head";
 import "./pages/mainstyle.css";
@@ -63,6 +64,10 @@ function App() {
             <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
               <Head textContent="PORTFOLIO" />
               <Portfolio />
+            </Route>
+            <Route>
+              <Head textContent="OTHER" />
+              <Other />
             </Route>
             <Route>
               <Head textContent="Uh Oh, 404!" />
