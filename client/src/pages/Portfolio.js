@@ -13,6 +13,45 @@ function Portfolio({ handleOpeningSidebar }) {
   const [projects, setProjects] = useState([]);
   const [repoNames, setRepoNames] = useState([]);
 
+  // KONAMI CODE
+  const [KC, setKC] = useState(null);
+  var KonamiCode = [];
+  // Add event listeners
+  useEffect(() => {
+    if (KC !== null) {
+      window.addEventListener("keyup", (evt) => {
+        KonamiCode.push(evt.code);
+        console.log(evt.code);
+        if (KonamiCode.length === 10) {
+          if (
+            KonamiCode.join(``) ===
+            "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightKeyBKeyA"
+          ) {
+            setKC("KC");
+            return;
+          }
+
+          console.log(`wommmmp`);
+          return;
+        } else if (KonamiCode.length > 10) {
+          KonamiCode = [];
+        }
+      });
+      // Remove event listeners on cleanup
+      return () => {
+        window.removeEventListener("keyup", (evt) => {
+          console.log(evt.code);
+        });
+      };
+    }
+
+    if (KC === "KC") {
+      // winner, winner
+      // do this
+      console.log(window.location);
+    }
+  }, [KC, KonamiCode]);
+
   // Loads all Projects and sets them to Projects
   function loadProjects() {
     API.getProjects()
@@ -43,7 +82,7 @@ function Portfolio({ handleOpeningSidebar }) {
           repoNames.forEach((name) => {
             if (name === item.name) {
               projects.forEach((proj) => {
-                console.log(proj)
+                console.log(proj);
               });
               console.log(`${item.name}\r\n last updated ${item.updated_at}`);
             }
@@ -54,7 +93,13 @@ function Portfolio({ handleOpeningSidebar }) {
   }, [repoNames]);
 
   return (
-    <div role="main" className="container-fluid p-0 h-100">
+    <div
+      onClick={() => {
+        setKC("run");
+      }}
+      role="main"
+      className="container-fluid p-0 h-100"
+    >
       <Row className="row justify-content-end m-0">
         {projects.length
           ? projects.map((Project, index) => (
