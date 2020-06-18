@@ -15,26 +15,30 @@ function Portfolio() {
   // KONAMI CODE
   const [KC, setKC] = useState(null);
   var KonamiCode = [];
-  // Add event listeners
+
   useEffect(() => {
+    if (KC === "KC") {
+      // winner, winner
+      // do this
+      window.location.href = "https://en.wikipedia.org/wiki/Konami_Code"
+      // console.log(window.location.href);
+    }
     if (KC !== null) {
+      // Add event listeners
       window.addEventListener("keyup", (evt) => {
-        KonamiCode.push(evt.code);
-        console.log(evt.code);
+        KonamiCode.push(evt.code.trim());
         if (KonamiCode.length === 10) {
+          console.log(KonamiCode.join(``), KonamiCode.length);
           if (
-            KonamiCode.join(``) ===
+            KonamiCode.join(``).toString() ===
             "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightKeyBKeyA"
           ) {
             setKC("KC");
-            return;
           }
-
-          console.log(`wommmmp`);
-          return;
         } else if (KonamiCode.length > 10) {
           KonamiCode = [];
         }
+
       });
       // Remove event listeners on cleanup
       return () => {
@@ -42,12 +46,6 @@ function Portfolio() {
           console.log(evt.code);
         });
       };
-    }
-
-    if (KC === "KC") {
-      // winner, winner
-      // do this
-      console.log(window.location);
     }
   }, [KC, KonamiCode]);
 
@@ -65,14 +63,16 @@ function Portfolio() {
   }
   function loadGithubData(data) {
     API.getGitUpdateData().then((gitData) => {
-      gitData.data.forEach((item) => {
-        data.forEach((proj) => {
-          if (proj.repo_name === item.name) {
-            proj.updated_at = item.updated_at
-            // console.log(`${item.name}\r\n last updated ${item.updated_at}`);
-          }
+      if (gitData !== `error`) {
+        gitData.data.forEach((item) => {
+          data.forEach((proj) => {
+            if (proj.repo_name === item.name) {
+              proj.updated_at = item.updated_at
+            }
+          });
         });
-      });
+      }
+      console.log(data)
       setProjects(data)
     });
   }
@@ -87,6 +87,7 @@ function Portfolio() {
     <div
       onClick={() => {
         setKC("run");
+        KonamiCode = [];
       }}
       role="main"
       className="container-fluid p-0 h-100"
@@ -99,7 +100,7 @@ function Portfolio() {
               <h3>{Project.title}</h3>
               <p style={{ fontSize: "14px" }}>{Project.libraries}</p>
               <p>{Project.lead}</p>
-              <p>Last updated {moment(Project.updated_at).calendar()}</p>
+              {Project.updated_at ? <p>Last updated {moment(Project.updated_at).calendar()}</p> : ""}
               <a href={Project.app_url} rel="noopener noreferrer"
                 target="_blank">
                 <i className="fa fa-chevron-right"> app</i>
