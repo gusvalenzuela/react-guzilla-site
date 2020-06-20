@@ -5,8 +5,9 @@ import "./mainstyle.css";
 import { Row } from "../components/Grid";
 import Card from "../components/Card";
 import localProjects from "../utils/localProjects.json";
-import Foot from "../components/Foot";
+
 import ResumeCard from "../components/ResumeCard";
+import Foot from "../components/Foot";
 
 function Portfolio() {
   // Setting our component's initial state
@@ -85,7 +86,7 @@ function Portfolio() {
         KonamiCode = [];
       }}
       role="main"
-      className="container-fluid p-0 h-100"
+      className="container-fluid p-0"
     >
       <Row className="row justify-content-end m-0">
         {projects.length
@@ -119,7 +120,7 @@ function Portfolio() {
           : ""}
         <ResumeCard />
       </Row>
-      <Foot />
+     
     </div>
   );
 }

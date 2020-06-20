@@ -4,10 +4,11 @@ import Sidebar from "react-sidebar";
 import NoMatch from "./pages/NoMatch";
 import Portfolio from "./pages/Portfolio";
 import Homepage from "./pages/Homepage";
-import Other from "./pages/Other"
+import Other from "./pages/Other";
 import Nav from "./components/Nav";
 import SidebarToggle from "./components/SidebarToggle";
 import Head from "./components/Head";
+import Foot from "./components/Foot";
 import "./pages/mainstyle.css";
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
             <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
               <Head textContent="PORTFOLIO" />
               <Portfolio />
+              
             </Route>
             <Route>
               <Head textContent="OTHER" />
@@ -74,6 +76,7 @@ function App() {
               <NoMatch />
             </Route>
           </Switch>
+          <Foot />
         </Sidebar>
       </div>
     </Router>

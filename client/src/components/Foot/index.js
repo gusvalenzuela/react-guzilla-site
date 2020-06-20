@@ -20,18 +20,18 @@ function Foot() {
               <i className="fa fa-linkedin" aria-hidden="true"></i>
             </a>
           </li>
-          <li>
-            <a href="#target-1" target="_blank"  rel="noopener noreferrer">
+          {/* <li>
+            <a href="" target="_blank"  rel="noopener noreferrer">
               <i className="fa fa-instagram" aria-hidden="true"></i>
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a href="#target-1" target="_blank"  rel="noopener noreferrer">
               <i className="fa fa-pinterest-p" aria-hidden="true"></i>
             </a>
-          </li>
+          </li> */}
           <li>
-            <a href="#target-1" target="_blank"  rel="noopener noreferrer">
+            <a href="https://twitter.com/vrsulo" target="_blank"  rel="noopener noreferrer">
               <i className="fa fa-twitter" aria-hidden="true"></i>
             </a>
           </li>
