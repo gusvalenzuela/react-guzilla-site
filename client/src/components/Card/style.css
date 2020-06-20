@@ -31,6 +31,12 @@
 .card a:hover {
   opacity: 0.66;
 }
+.card-semantic{
+  border: 1px transparent !important;
+  background-color: #020202;
+  color: #ffffff;
+  padding: 2rem 1.25rem;
+}
 @media screen and (max-width: 768px) {
   .card-img-overlay {
     font-size: medium;

@@ -5,13 +5,16 @@
   "proxy": "http://localhost:3008/",
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "8.2.0",
     "moment": "^2.26.0",
     "octonode": "^0.9.5",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^2.1.1",
-    "react-sidebar": "3.0.2"
+    "react-sidebar": "3.0.2",
+    "semantic-ui-css": "2.4.1",
+    "semantic-ui-react": "0.88.2"
   },
   "scripts": {
     "start": "set PORT=3007 && react-scripts start",
