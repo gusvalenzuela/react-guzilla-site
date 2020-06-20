@@ -8,5 +8,9 @@
   min-height: 142px;
 }
 .head::before {
-  content: "guz-valenzuela //";
+  content: "gus-valenzuela //";
+}
+.homepage-emoji::before {
+  content: "🙄";
+  font-size: 3.7rem;
 }

@@ -113,7 +113,7 @@ function Portfolio() {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <i className="fa fa-github"> source code</i>
+                  <i className="fa fa-github"> code</i>
                 </a>
               </Card>
             ))
