@@ -16,9 +16,13 @@ function Nav() {
           </a>
         </li>
         <li>
-          <a className="navbar-togglerz" data-toggle="collapse"
+          <a
+            className="navbar-togglerz"
+            data-toggle="collapse"
             data-target="#sidebarMoreContent"
-            aria-controls="sidebarMoreContent" href="/">
+            aria-controls="sidebarMoreContent"
+            href="/"
+          >
             contact,
           </a>
         </li>
@@ -26,28 +30,26 @@ function Nav() {
           <ul className="navbar-contact-dropdown">
             <li>
               <a href="mailto:gusrvalenzuela@gmail.com">
-                <span className="fa fa-envelope"></span> gusrvalenzuela@gmail.com
-            </a>
+                <span className="fa fa-envelope"></span>
+              </a>
             </li>
             <li>
               <a
-
                 href="tel:+1-714-742-7119"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <span className="fa fa-phone"></span> 714.742.7119
-          </a>
+                <span className="fa fa-phone"></span>
+              </a>
             </li>
           </ul>
         </div>
         <li>
-          <a className="navbar-togglerz"  href="/other">
+          <a className="navbar-togglerz" href="/other">
             other.
           </a>
         </li>
       </ul>
-
     </nav>
   );
 }

@@ -4,7 +4,7 @@
 }
 
 .navbar-togglerz {
-  padding: .25rem .75rem;
+  padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
@@ -14,11 +14,16 @@
 .navbar-contact-dropdown {
   color: #030303;
   list-style: none;
-  padding-left: 1.25rem;
+  padding-left: 1.5rem;
 }
 
+.navbar-contact-dropdown .fa {
+  font-size: 32px;
+  padding: .25rem;
+  padding-right: 2rem;
+}
 .navbar-contact-dropdown a {
-  color: #030303;
+  margin-right: .5rem;
 }
 
 .sidenavbar {

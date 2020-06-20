@@ -106,7 +106,7 @@ function Portfolio() {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <i className="fa fa-chevron-right"> app</i>
+                  <i className="fa fa-chevron-right"> open</i>
                 </a>
                 <a
                   href={Project.repo_url}
@@ -120,7 +120,6 @@ function Portfolio() {
           : ""}
         <ResumeCard />
       </Row>
-     
     </div>
   );
 }
