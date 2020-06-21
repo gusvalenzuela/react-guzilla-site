@@ -6,6 +6,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "8.2.0",
+    "lazysizes": "5.2.2",
     "moment": "^2.26.0",
     "octonode": "^0.9.5",
     "react": "^16.6.3",

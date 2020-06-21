@@ -7,7 +7,6 @@ import Card from "../components/Card";
 import localProjects from "../utils/localProjects.json";
 
 import ResumeCard from "../components/ResumeCard";
-import Foot from "../components/Foot";
 
 function Portfolio() {
   // Setting our component's initial state
@@ -77,6 +76,7 @@ function Portfolio() {
   // Load all Projects and store them with setProjects
   useEffect(() => {
     loadProjects();
+    
   }, []);
 
   return (
