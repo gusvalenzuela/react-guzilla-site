@@ -15,10 +15,12 @@ function App() {
   const viewportMin = window.matchMedia(`(min-width: 768px)`);
   const [sideNavOpen, setSideNavOpen] = useState(viewportMin.matches);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [smallScreen, setSmallScreen] = useState(!viewportMin.matches);
 
   const listener = () => {
     setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
     setSideNavOpen(viewportMin.matches);
   };
 
@@ -60,7 +62,7 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Head textContent="HOME" />
-              <Homepage />
+              <Homepage windowHeight={windowHeight} />
             </Route>
             <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
               <Head textContent="PORTFOLIO" />

@@ -68,6 +68,7 @@ body {
   background: var(--color3) !important;
   margin: 0 0 2.25rem !important;
   min-width: 100% !important;
+  
 }
 
 .custom-blockquote {
@@ -81,7 +82,7 @@ body {
 }
 
 .welcome-header {
-  text-align: left;
+  text-align: center;
   font-weight: 400;
   font-family: var(--header-font);
   font-size: 1.5rem;
@@ -129,7 +130,6 @@ body {
   background-image: url(../images/godzilla-2.jpg);
   background-size: cover;
   background-position: 50% 42%;
-  /* height: 25.629em; */
   padding: 0 !important;
   border: none !important;
   margin: auto;
@@ -207,9 +207,9 @@ body {
 }
 
 #about-me {
-  padding: 0 1em;
   text-align: justify;
   margin-bottom: 2.25em;
+  padding: 2rem .5rem;
 }
 
 #index-last-row {
@@ -242,4 +242,9 @@ body {
 .information-container {
   text-align: left;
   display: inline-block;
+}
+
+.portfolio-dimmer{
+  position: relative !important;
+  z-index: 1 !important;
 }

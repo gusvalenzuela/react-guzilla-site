@@ -10,6 +10,11 @@ function Nav() {
             home,
           </a>
         </li>
+        <li className="">
+          <a className="navbar-togglerz" href="/#about-me">
+            about,
+          </a>
+        </li>
         <li>
           <a className="navbar-togglerz" href="/portfolio">
             portfolio,

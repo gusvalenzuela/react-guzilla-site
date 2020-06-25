@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal, Dimmer, Loader } from "semantic-ui-react";
-// import "semantic-ui-css";
+import 'semantic-ui-css/semantic.min.css'
 
 const ResumeModal = ({ Button }) => {
   const [loading, setLoading] = useState(true);
