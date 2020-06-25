@@ -1,4 +1,6 @@
 import React from "react";
+import { Segment } from "semantic-ui-react";
+import 'semantic-ui-css/semantic.min.css'
 
 function Homepage({ windowHeight }) {
   return (
@@ -34,16 +36,17 @@ function Homepage({ windowHeight }) {
 
         </div>
       </div>
-      <div className="row mb-4 justify-content-center">
-        <div className="col-10" >
-          <p style={{ textAlign: "justify" }}>
-            In the <a href="/portfolio" className="text-link">portfolio</a> page of this website you will find projects I have created or worked on. In the <a href="/contact"
-              className="text-link">contact</a> page you'll find a form you may use to contact me. (🚧 "under construction" 🚧)
-      </p>
+      <div className="row justify-content-center">
+        <div className="col col-md-8 " id="quotebox">
+          <Segment raised>
 
+            <p>"And remember, the world is possibility if only you'll discover it." </p>
+          </Segment>
+          <img className="index-quoteblock-vertical-avatar" src="./assets/images/ellison-avatar.jpg" alt=""></img>
+          <p className="index-quoteblock-vertical-name">Ralph Ellison, <i>Invisible Man</i></p>
         </div>
-      </div>
-    </div >
+      </div >
+    </div>
   );
 }
 

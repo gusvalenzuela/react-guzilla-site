@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import API from "../utils/API";
 import "./mainstyle.css";
-import { Row } from "../components/Grid";
 import Card from "../components/Card";
 import localProjects from "../utils/localProjects.json";
 import { Dimmer, Loader } from "semantic-ui-react";

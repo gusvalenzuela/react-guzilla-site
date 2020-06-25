@@ -209,7 +209,7 @@ body {
 #about-me {
   text-align: justify;
   margin-bottom: 2.25em;
-  padding: 2rem .5rem;
+  padding: 2rem 1rem;
 }
 
 #index-last-row {
@@ -237,6 +237,7 @@ body {
 
 #quotebox {
   margin-bottom: 3.375em;
+  text-align: center;
 }
 
 .information-container {
