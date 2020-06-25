@@ -5,8 +5,7 @@ function Homepage() {
     <div className="h-100">
       <div className="callout callout-index" id="callout">
         <div
-          className="row column text-center top-bar-content"
-          style={{ paddingBottom: "1.54rem" }}
+          className="top-bar-custom"
         >
           <p className="header-index" id="header">
             Gus Valenzuela

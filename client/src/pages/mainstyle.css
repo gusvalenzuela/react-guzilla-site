@@ -138,7 +138,7 @@ body {
 
 .header-index,
 .subheader-index {
-  text-align: right;
+  text-align: left;
 }
 
 .header-index {
@@ -190,7 +190,7 @@ body {
 }
 
 .top-bar-custom {
-  background: #000000aa;
+  background: transparent;
   width: 100%;
   overflow: hidden;
   padding: .667rem 1.5rem;

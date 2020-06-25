@@ -4,7 +4,7 @@ import "./style.css";
 function Nav() {
   return (
     <nav className="sidenavbar">
-      <ul className="navbar-nav mr-auto">
+      <ul className="navbar-nav">
         <li className="">
           <a className="navbar-togglerz" href="/">
             home,

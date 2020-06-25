@@ -1,6 +1,10 @@
 .navbar-nav * {
   color: #030303;
   text-shadow: 1px 1px #ffffff;
+  
+}
+.navbar-nav {
+  margin: auto 0 !important;
 }
 
 .navbar-togglerz {
@@ -14,7 +18,7 @@
 .navbar-contact-dropdown {
   color: #030303;
   list-style: none;
-  padding-left: 1.5rem;
+  /* padding-left: 1.5rem; */
 }
 
 .navbar-contact-dropdown .fa {
