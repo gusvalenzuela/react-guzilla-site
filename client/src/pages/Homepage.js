@@ -1,34 +1,21 @@
 import React from "react";
-import { Col, Row, Container } from "../components/Grid";
 
 function Homepage() {
   return (
     <div className="h-100">
-      <Container fluid>
-        <Row>
-          <Col style={{ clear: "both", padding: "0" }}>
-            <div
-              style={{
-                height: "100%",
-                clear: "both",
-                paddingTop: "7rem",
-                textAlign: "right",
-                border: "1px solid transparent",
-              }}
-              className="jumbotron mx-0"
-            >
-              <h1>Welcome to my site, have a look around</h1>
-              <div className="homepage-emoji"></div>
-            </div>
-          </Col>
-        </Row>
-        {/* <Row>
-          <Col style={{ clear: "both", padding: "0" }}>
-            <p>Welcome to my site, have a look around</p>
-            <div className="homepage-emoji"></div>
-          </Col>
-        </Row> */}
-      </Container>
+      <div className="callout callout-index" id="callout">
+        <div
+          className="row column text-center top-bar-content"
+          style={{ paddingBottom: "1.54rem" }}
+        >
+          <p className="header-index" id="header">
+            Gus Valenzuela
+          </p>
+          <p className="subheader-index" id="subheader">
+            A responsive web developer for the modern world.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

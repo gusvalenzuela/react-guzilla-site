@@ -42,6 +42,11 @@ function Nav() {
                 <span className="fa fa-phone"></span>
               </a>
             </li>
+            {/* <li>
+              <a href="/contact">
+                <span className="fa fa-no">...more</span>
+              </a>
+            </li> */}
           </ul>
         </div>
         <li>
