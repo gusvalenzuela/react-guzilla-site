@@ -5,7 +5,7 @@ const routes = require("./routes");
 const app = express();
 const compression = require(`compression`);
 const PORT = process.env.PORT || 3008;
-
+require('dotenv').config()
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -21,7 +21,7 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactguzilladb",
+  process.env.MONGODB_URI || process.env.MONGODB_OWN,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
@@ -29,3 +29,4 @@ mongoose.connect(
 app.listen(PORT, function () {
   console.log(`=====> API Server now listening on PORT ${PORT}!`);
 });
+ 

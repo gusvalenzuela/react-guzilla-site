@@ -21,7 +21,7 @@ function Homepage({ windowHeight }) {
       <div className="row intro-para-row justify-content-center">
         <div className="col-md-10 col-lg-8" id="about-me">
           <header className="welcome-header">Welcome to my site.</header>
-          <img src="./assets/images/profilephoto3.jpg" alt="Profile Photo" className="profile-photo"></img>
+          <img src="./assets/images/profilephoto3.jpg" alt="Headshot of moi" className="profile-photo"></img>
           <p style={{ textAlign: "justify" }}>
             Since an adolescent, I have been fascinated with technology, computers, and the world wide web. I made
             static webpages in my youth and even got to deploy some flash-centric wonders. Over the years my love of
