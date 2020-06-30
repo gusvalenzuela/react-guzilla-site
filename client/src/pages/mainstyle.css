@@ -14,6 +14,7 @@ body {
 } */
 
 /* holdover from previous */
+
 /* 
 
 
@@ -50,12 +51,10 @@ $color5: #e4c5afff;
 }
 
 * {
-  font-family: var(--text-font), -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--text-font), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-html,
-body {
+html, body {
   min-height: 100%;
 }
 
@@ -68,7 +67,6 @@ body {
   background: var(--color3) !important;
   margin: 0 0 2.25rem !important;
   min-width: 100% !important;
-  
 }
 
 .custom-blockquote {
@@ -98,9 +96,10 @@ body {
   height: 160px;
 }
 
-.content-wrap > * {
+.content-wrap>* {
   background: var(--color-white);
 }
+
 .content-wrap .row {
   padding: 2.25rem 1.5rem;
 }
@@ -115,8 +114,7 @@ body {
 }
 
 .mini-callout footer {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 0.667em;
   font-weight: 600;
   float: right;
@@ -136,8 +134,7 @@ body {
   margin-bottom: 0;
 }
 
-.header-index,
-.subheader-index {
+.header-index, .subheader-index {
   text-align: left;
 }
 
@@ -196,12 +193,13 @@ body {
   padding: .667rem 1.5rem;
 }
 
-.top-bar-menu li > a {
+.top-bar-menu li>a {
   color: var(--color-white);
   text-shadow: 1px 1px #000000ff;
   font-weight: 700;
   padding: 0.5em;
 }
+
 .text-link {
   color: var(--color2);
 }
@@ -231,8 +229,15 @@ body {
   font-size: 3.375rem;
   margin-bottom: 0.296em;
 }
+
 #index-last-row hr {
   display: none;
+}
+
+#skillsbox {
+  margin: auto;
+  margin-top: 3.375em;
+  text-align: center;
 }
 
 #quotebox {
@@ -245,7 +250,7 @@ body {
   display: inline-block;
 }
 
-.portfolio-dimmer{
+.portfolio-dimmer {
   position: relative !important;
   z-index: 1 !important;
 }

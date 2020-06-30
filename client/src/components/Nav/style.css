@@ -18,7 +18,7 @@
 .navbar-contact-dropdown {
   color: #030303;
   list-style: none;
-  /* padding-left: 1.5rem; */
+  padding-left: 1.5rem;
 }
 
 .navbar-contact-dropdown .fa {

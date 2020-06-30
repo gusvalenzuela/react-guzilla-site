@@ -33,6 +33,15 @@ function Homepage({ windowHeight }) {
             Please take a look around at my portfolio and if maybe you like what you see, shoot me an email. Hope to
             hear from you! Have a wonderful day =] </p>
 
+          <div className="col col-md-10 " id="skillsbox">
+            <Segment>
+
+              <p>"Technical Skills and Experience" </p>
+            </Segment>
+            <p className="index-quoteblock-vertical-name"><b>FRONT END</b>: HTML5, CSS3, Bootstrap, React</p>
+            <p className="index-quoteblock-vertical-name"><b>BACK END</b>: Node, MySQL, MongoDB, Express, AJAX Back-end: Node</p>
+            <p className="index-quoteblock-vertical-name"><b>OTHER</b>: JavaScript, Git, SQL, JSON, GitHub, MVC, AJAX, Handlebars, jQuery, REST, APIs, UI</p>
+          </div>
 
         </div>
       </div>

@@ -35,7 +35,12 @@ function Nav() {
           <ul className="navbar-contact-dropdown">
             <li>
               <a href="mailto:gusrvalenzuela@gmail.com">
-                <span className="fa fa-envelope"></span>
+                <i className="fa fa-envelope"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/gusvalenzuela" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-github" aria-hidden="true"></i>
               </a>
             </li>
             <li>
@@ -44,7 +49,7 @@ function Nav() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <span className="fa fa-phone"></span>
+                <i className="fa fa-phone"></i>
               </a>
             </li>
             {/* <li>
@@ -54,11 +59,11 @@ function Nav() {
             </li> */}
           </ul>
         </div>
-        <li>
+        {/* <li>
           <a className="navbar-togglerz" href="/other">
             other.
           </a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
