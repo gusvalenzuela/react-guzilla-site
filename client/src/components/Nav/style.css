@@ -1,8 +1,8 @@
 .navbar-nav * {
   color: #030303;
   text-shadow: 1px 1px #ffffff;
-  
 }
+
 .navbar-nav {
   margin: auto 0 !important;
 }
@@ -26,6 +26,7 @@
   padding: .25rem;
   padding-right: 2rem;
 }
+
 .navbar-contact-dropdown a {
   margin-right: .5rem;
 }
@@ -53,7 +54,6 @@ div[role="navigation"] {
   /* color: #030303; */
   margin: 0;
   min-height: 100%;
-  background: #ffffff;
 }
 
 /* 
