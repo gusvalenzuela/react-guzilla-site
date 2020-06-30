@@ -65,7 +65,7 @@ html, body {
 
 .intro-para-row {
   background: var(--color3) !important;
-  margin: 0 0 2.25rem !important;
+  margin: 0 !important;
   min-width: 100% !important;
 }
 
@@ -241,7 +241,8 @@ html, body {
 }
 
 #quotebox {
-  margin-bottom: 3.375em;
+  background: #f7f7f7;
+  padding: 1rem;
   text-align: center;
 }
 
