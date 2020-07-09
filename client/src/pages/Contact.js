@@ -79,7 +79,7 @@ function Contact() {
         <div style={{ display: "flow-root" }}>
           <div
             style={{
-              display: `${emailData.success ? "none" : ""}`,
+              display: `${!emailData.success ? "none" : ""}`,
               padding: "1rem",
               textAlign: "center",
               color: "#ff0000",
