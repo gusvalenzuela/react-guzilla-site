@@ -1,5 +1,4 @@
 import axios from "axios";
-
 export default {
   // Gets all projects
   getProjects: function () {
@@ -18,7 +17,10 @@ export default {
     return axios.post("/api/projects", ProjectData);
   },
   getGitUpdateData: function (repo) {
-    return axios.get(`https://api.github.com/users/gusvalenzuela/repos`).catch(err => `error`)
+    return axios.get(`https://api.github.com/users/gusvalenzuela/repos`);
     // return axios.get(`https://api.github.com/users/gusvalenzuela/${repo}/events`)
-  }
+  },
+  sendContactEmail: function (data) {
+    return axios.post(`/api/sendmail`, data);
+  },
 };

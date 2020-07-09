@@ -3,6 +3,7 @@ import { Segment } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css'
 
 function Homepage({ windowHeight }) {
+  document.title = `gusVALENZUELA | Home`
   return (
     <div className="homepage-container">
       <div className="callout-index row" id="callout">
@@ -27,8 +28,7 @@ function Homepage({ windowHeight }) {
             static webpages in my youth and even got to deploy some flash-centric wonders. Over the years my love of
             technology and computers only grew more powerful - occassionally doing activites on FreeCodeCamp and taking
             computer science courses at the local community college.
-            Most recently I have been attending a Coding Bootcamp, by Trilogy/UC Davis Continuing Education, on the path to
-        becoming a full stack web developer. I hope to continue to grow as a web developer and as a person.</p>
+            Most recently I completed a Coding Bootcamp, by Trilogy/UC Davis Continuing Education, earning a certificate in Full Stack Web Development. I hope to continue to grow as a web developer and as a person.</p>
           <p>
             Please take a look around at my portfolio and if maybe you like what you see, shoot me an email. Hope to
             hear from you! Have a wonderful day =] </p>

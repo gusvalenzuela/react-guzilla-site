@@ -20,13 +20,18 @@ function Nav() {
             portfolio,
           </a>
         </li>
+        {/* <li>
+          <a className="navbar-togglerz" href="/contact">
+            contact,
+          </a>
+        </li> */}
         <li>
           <a
             className="navbar-togglerz"
             data-toggle="collapse"
             data-target="#sidebarMoreContent"
             aria-controls="sidebarMoreContent"
-            href="/"
+            href="/contact"
           >
             contact,
           </a>
@@ -43,20 +48,6 @@ function Nav() {
                 <i className="fa fa-github" aria-hidden="true"></i>
               </a>
             </li>
-            <li>
-              <a
-                href="tel:+1-714-742-7119"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <i className="fa fa-phone"></i>
-              </a>
-            </li>
-            {/* <li>
-              <a href="/contact">
-                <span className="fa fa-no">...more</span>
-              </a>
-            </li> */}
           </ul>
         </div>
         {/* <li>

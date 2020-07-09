@@ -58,19 +58,6 @@ function ResumeCard() {
             </List.Header>
           </List.Content>
         </List.Item>
-        <List.Item>
-          <List.Icon name="phone" size="large" verticalAlign="middle" />
-          <List.Content>
-            <List.Header
-              as="a"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="tel:+1-714-742-7119"
-            >
-              714.742.7119
-            </List.Header>
-          </List.Content>
-        </List.Item>
       </List>
     </div>
   );

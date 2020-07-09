@@ -51,10 +51,12 @@ $color5: #e4c5afff;
 }
 
 * {
-  font-family: var(--text-font), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--text-font), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
@@ -96,7 +98,7 @@ html, body {
   height: 160px;
 }
 
-.content-wrap>* {
+.content-wrap > * {
   background: var(--color-white);
 }
 
@@ -114,7 +116,8 @@ html, body {
 }
 
 .mini-callout footer {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 0.667em;
   font-weight: 600;
   float: right;
@@ -134,7 +137,8 @@ html, body {
   margin-bottom: 0;
 }
 
-.header-index, .subheader-index {
+.header-index,
+.subheader-index {
   text-align: left;
 }
 
@@ -190,10 +194,10 @@ html, body {
   background: transparent;
   width: 100%;
   overflow: hidden;
-  padding: .667rem 1.5rem;
+  padding: 0.667rem 1.5rem;
 }
 
-.top-bar-menu li>a {
+.top-bar-menu li > a {
   color: var(--color-white);
   text-shadow: 1px 1px #000000ff;
   font-weight: 700;
@@ -254,4 +258,25 @@ html, body {
 .portfolio-dimmer {
   position: relative !important;
   z-index: 1 !important;
+}
+
+.contact-form {
+  margin: auto;
+  padding: 2.25rem 1rem 1rem;
+  width: 75%;
+}
+.contact-container {
+  height: 100%;
+}
+.contact-page-icons{
+  list-style: none;
+}
+.contact-page-icons > a{
+  margin-right: 1rem;
+  font-size: xx-large;
+}
+
+div[role="main"] {
+  background: #030303 !important;
+  color: #ffffff !important;
 }

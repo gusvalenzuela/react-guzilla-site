@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Sidebar from "react-sidebar";
 import NoMatch from "./pages/NoMatch";
 import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 import Homepage from "./pages/Homepage";
 import Other from "./pages/Other";
 import Nav from "./components/Nav";
@@ -67,7 +68,10 @@ function App() {
             <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
               <Head textContent="PORTFOLIO" />
               <Portfolio />
-              
+            </Route>
+            <Route exact path={["/contact", "/contactme"]}>
+              <Head textContent="CONTACT ME" />
+              <Contact />
             </Route>
             <Route>
               <Head textContent="OTHER" />
