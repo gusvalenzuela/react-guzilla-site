@@ -5,35 +5,34 @@ import API from "../utils/API";
 
 function Contact() {
   document.title = `gusVALENZUELA | Contact`;
-  const [emailData, setEmailData] = useState({
+  const emailOptions = {
     name: "",
     email: "",
     message: "",
     success: "",
-  });
+    btnMsg: "Send",
+  };
+  const [emailData, setEmailData] = useState(emailOptions);
+
   function handleFormSubmission(event) {
     event.preventDefault();
+
+    setEmailData({ ...emailData, btnMsg: "Sending..." });
+
     API.sendContactEmail(emailData).then((res) => {
       if ((res.data = `success`)) {
-        setEmailData({ ...emailData, success: true });
+        setEmailData({ ...emailData, success: true, btnMsg: "Sent" });
       } else {
-        setEmailData({ ...emailData, success: false });
+        setEmailData({ ...emailData, success: false, btnMsg: "Fail" });
       }
+      // after 5 secs, form data and message/toast is cleared
+      setTimeout(() => {
+        setEmailData(emailOptions);
+      }, 5000);
     });
   }
   return (
     <div className="contact-container">
-      <div
-        style={{
-          display: `${!emailData.success ? "none" : ""}`,
-          padding: "2rem",
-          textAlign: "center",
-          color: "#ff0000",
-          fontWeight: "800",
-        }}
-      >
-        <p>Thank you, {emailData.name}! Message sent successfully.</p>
-      </div>
       <Form action="#" className="contact-form">
         <Form.Field>
           <label>Name</label>
@@ -77,7 +76,25 @@ function Contact() {
             value={emailData.message}
           />
         </Form.Field>
-        <Button type="submit" content="Send" onClick={handleFormSubmission} />
+        <div style={{ display: "flow-root" }}>
+          <div
+            style={{
+              display: `${emailData.success ? "none" : ""}`,
+              padding: "1rem",
+              textAlign: "center",
+              color: "#ff0000",
+              fontWeight: "800",
+            }}
+          >
+            <p>Thank you, {emailData.name}! Message successfully sent.</p>
+          </div>
+          <Button
+            type="submit"
+            content={emailData.btnMsg}
+            onClick={handleFormSubmission}
+            style={{ float: "right", width: "auto", padding: "1rem 2rem" }}
+          />
+        </div>
       </Form>
       <section style={{ textAlign: "center", marginTop: "1rem" }}>
         <p>Other ways to contact me</p>
@@ -96,16 +113,6 @@ function Contact() {
           >
             <i className="fa fa-linkedin" aria-hidden="true"></i>
           </a>
-          {/* <li>
-            <a href="" target="_blank"  rel="noopener noreferrer">
-              <i className="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </li> */}
-          {/* <li>
-            <a href="#target-1" target="_blank"  rel="noopener noreferrer">
-              <i className="fa fa-pinterest-p" aria-hidden="true"></i>
-            </a>
-          </li> */}
           <a
             href="https://twitter.com/vrsulo"
             target="_blank"
