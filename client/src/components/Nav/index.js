@@ -20,12 +20,12 @@ function Nav() {
             portfolio,
           </a>
         </li>
-        {/* <li>
+        <li>
           <a className="navbar-togglerz" href="/contact">
             contact,
           </a>
-        </li> */}
-        <li>
+        </li>
+        {/* <li>
           <a
             className="navbar-togglerz"
             data-toggle="collapse"
@@ -49,7 +49,7 @@ function Nav() {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
         {/* <li>
           <a className="navbar-togglerz" href="/other">
             other.

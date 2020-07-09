@@ -23,7 +23,15 @@ function Contact() {
   }
   return (
     <div className="contact-container">
-      <div style={{ display: `${emailData.success ? "none" : ""}`, padding: "2rem", textAlign: "center" }}>
+      <div
+        style={{
+          display: `${!emailData.success ? "none" : ""}`,
+          padding: "2rem",
+          textAlign: "center",
+          color: "#ff0000",
+          fontWeight: "800",
+        }}
+      >
         <p>Thank you, {emailData.name}! Message sent successfully.</p>
       </div>
       <Form action="#" className="contact-form">
