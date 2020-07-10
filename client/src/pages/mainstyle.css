@@ -258,7 +258,7 @@ body {
 #contact-container {
   background: var(--color-white) !important;
   color: var(--main-black) !important;
-  /* height: 100% !important; */
+  height: 100% !important;
 }
 .contact-page-icons {
   list-style: none;
@@ -273,7 +273,14 @@ body {
 }
 
 div[role="main"] {
-  background: #000000ff !important;
+  background: var(--color-white) !important;
   color: #ffffff !important;
+}
+div[role="main"] > .portfolio {
+  background: var(--main-black) !important;
+  color: #ffffff !important;
+}
+div[role="dialog"] {
+  background: var(--main-black) !important;
   height: 100% !important;
 }

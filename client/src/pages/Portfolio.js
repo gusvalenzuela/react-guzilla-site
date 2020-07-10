@@ -103,7 +103,7 @@ function Portfolio() {
         role="main"
         className="container-fluid p-0"
       >
-        <div className="row justify-content-end m-0">
+        <div className="row justify-content-end m-0 portfolio">
           {projects.map((Project, index) => (
             // card requires a key [has default image src "defaultimage01.jpg" if none given]
             <Card key={index} imgSrc={Project.img_src}>
@@ -139,7 +139,7 @@ function Portfolio() {
       </div>
     </>
   ) : (
-    <Dimmer role="main"  active>
+    <Dimmer role="dialog" active>
       <Loader indeterminate inline="centered" size="large">
         {loadMessage}
       </Loader>
