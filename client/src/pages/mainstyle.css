@@ -284,3 +284,9 @@ div[role="dialog"] {
   background: var(--main-black) !important;
   height: 100% !important;
 }
+
+@media screen and (max-width: 576px){
+  .contact-form {
+    width: 90%;
+  }
+}

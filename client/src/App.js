@@ -17,19 +17,12 @@ function App() {
   const [sideNavOpen, setSideNavOpen] = useState(viewportMin.matches);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const [scrollTop, setScrollTop] = useState(
-    document.scrollingElement.scrollTop
-  );
   const [smallScreen, setSmallScreen] = useState(!viewportMin.matches);
 
   const listener = () => {
     setWindowWidth(window.innerWidth);
     setWindowHeight(window.innerHeight);
     setSideNavOpen(viewportMin.matches);
-  };
-  const scrollListener = () => {
-    console.log(document.scrollingElement.scrollTop);
-    setScrollTop(document.scrollingElement.scrollTop);
   };
 
   useEffect(() => {
@@ -43,11 +36,6 @@ function App() {
     window.addEventListener("resize", listener);
   }, [windowWidth]);
 
-  useEffect(() => {
-    console.log(document.scrollingElement);
-    document.scrollingElement.addEventListener("scroll", scrollListener);
-  }, [scrollTop]);
-
   function handleOpeningSidebar() {
     if (!sideNavOpen) {
       setSideNavOpen(true);
@@ -55,7 +43,6 @@ function App() {
       setSideNavOpen(false);
     }
   }
-
   return (
     <Router>
       <div>
@@ -75,7 +62,10 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Head textContent="HOME" />
-              <Homepage windowHeight={windowHeight} />
+              <Homepage
+                windowHeight={windowHeight}
+                windowWidth={smallScreen || !sideNavOpen ? windowWidth - 32 : windowWidth - 180}
+              />
             </Route>
             <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
               <Head textContent="PORTFOLIO" />

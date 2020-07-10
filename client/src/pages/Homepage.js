@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
+import BottomChevron from "../components/BottomChevron";
 
-function Homepage({ windowHeight }) {
+function Homepage({ windowHeight, windowWidth }) {
   document.title = `grv.Home`;
+  const [scrollTop, setScrollTop] = useState(null);
+
+  // grabbing the parent element of scroll we're capturing - "on mount"
+  // setting its scrolltop value to state
+  useEffect(() => {
+    setScrollTop(
+      document.getElementById(`homepage-container`).parentElement.scrollTop
+    );
+  }, []);
+
+  const scrollListener = () => {
+    setScrollTop(
+      document.getElementById(`homepage-container`).parentElement.scrollTop
+    );
+  };
+
+  useEffect(() => {
+    // adds scroll listener to the element we're capturing
+    // calls function which then sets new scrolltop value
+    document
+      .getElementById(`homepage-container`)
+      .parentElement.addEventListener(`scroll`, scrollListener);
+
+    console.log(scrollTop);
+  }, [scrollTop]);
+
   return (
-    <div className="homepage-container">
+    <div className="homepage-container" id="homepage-container">
       <div className="callout-index row" id="callout">
         <div
           className="top-bar-custom"
@@ -19,6 +46,10 @@ function Homepage({ windowHeight }) {
           </p>
         </div>
       </div>
+      <BottomChevron
+        visible={scrollTop <= 20 ? true : false}
+        windowWidth={windowWidth}
+      />
 
       <div className="row intro-para-row justify-content-center m-0">
         <div className="col-md-10 col-xl-6" id="about-me">
@@ -60,7 +91,8 @@ function Homepage({ windowHeight }) {
               <b>FRONT END</b>: HTML5, CSS3, Bootstrap, React
             </p>
             <p className="index-quoteblock-vertical-name">
-              <b>BACK END</b>: Node, MySQL, MongoDB, Express, Mongoose, Sequelize, OAuth2
+              <b>BACK END</b>: Node, MySQL, MongoDB, Express, Mongoose,
+              Sequelize, OAuth2
             </p>
             <p className="index-quoteblock-vertical-name">
               <b>OTHER</b>: JavaScript, Git, SQL, JSON, GitHub, MVC, AJAX,
