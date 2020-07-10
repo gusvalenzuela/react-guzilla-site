@@ -45,7 +45,7 @@ function Contact() {
     }
   }
   return (
-    <div className="contact-container">
+    <div id="contact-container" role="main">
       <Form action="#" className="contact-form">
         <Form.Field>
           <label>
@@ -121,6 +121,7 @@ function Contact() {
           </div>
           <Button
             type="submit"
+            secondary
             content={emailData.btnMsg}
             onClick={handleFormSubmission}
             style={{ float: "right", width: "auto", padding: "1rem 2rem" }}

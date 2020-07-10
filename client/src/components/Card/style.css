@@ -8,10 +8,14 @@
 }
 .card-img-overlay i {
   color: var(--main-red);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   margin-right: 1rem;
   margin-bottom: 0.5rem;
+  margin-top: .25rem;
+}
+.card-img-overlay h2 {
+  margin-bottom: 0.33rem;
 }
 
 .card-img-overlay {

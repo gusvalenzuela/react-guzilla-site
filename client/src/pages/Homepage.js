@@ -21,7 +21,7 @@ function Homepage({ windowHeight }) {
       </div>
 
       <div className="row intro-para-row justify-content-center m-0">
-        <div className="col-md-10 col-lg-8" id="about-me">
+        <div className="col-md-10 col-xl-6" id="about-me">
           <header className="welcome-header">Welcome to my site.</header>
           <img
             src="./assets/images/profilephoto3.jpg"
@@ -41,18 +41,18 @@ function Homepage({ windowHeight }) {
           </p>
           <p>
             Please take a look around my{" "}
-            <a href="/portfolio" class="text-link">
+            <a href="/portfolio" className="text-link">
               portfolio
             </a>{" "}
             and if maybe you like what you see head over to my{" "}
-            <a href="/contact" class="text-link">
+            <a href="/contact" className="text-link">
               contact
             </a>{" "}
             page And shoot me an email. Hope to hear from you! Have a wonderful
             day =]
           </p>
 
-          <div className="col col-md-10" id="skillsbox">
+          <div className="col" id="skillsbox">
             <Segment>
               <p>Technical Skills and Experience</p>
             </Segment>
@@ -70,7 +70,7 @@ function Homepage({ windowHeight }) {
         </div>
       </div>
       <div className="row justify-content-center m-0" id="quotebox">
-        <div className="col col-md-8 ">
+        <div className="col col-md-6 col-lg-4">
           <Segment raised>
             <p>
               "And remember, the world is possibility if only you'll discover

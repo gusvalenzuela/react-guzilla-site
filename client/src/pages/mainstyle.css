@@ -228,11 +228,13 @@ body {
 }
 
 #quotebox {
-  background: #f7f7f7;
-  padding: 1rem;
+  background: var(--color-white);
+  padding: 3.375rem 0.25rem;
   text-align: center;
 }
-
+.index-quoteblock-vertical-avatar {
+  margin-bottom: 0.5rem;
+}
 .information-container {
   text-align: left;
   display: inline-block;
@@ -241,7 +243,7 @@ body {
 .portfolio-dimmer {
   position: relative !important;
   z-index: 1 !important;
-  height: 100%;
+  padding-top: 25% !important;
 }
 
 .contact-form {
@@ -252,9 +254,9 @@ body {
 .contact-form .input {
   box-shadow: 1px 1px #02020233 inset !important;
 }
-.contact-container {
-  height: 98%;
-  background: var(--color-white);
+#contact-container {
+  background: var(--color-white) !important;
+  color: var(--main-black) !important;
 }
 .contact-page-icons {
   list-style: none;
@@ -269,6 +271,7 @@ body {
 }
 
 div[role="main"] {
-  background: #030303 !important;
+  background: #000000ff !important;
   color: #ffffff !important;
+  height: 100% !important;
 }

@@ -17,12 +17,19 @@ function App() {
   const [sideNavOpen, setSideNavOpen] = useState(viewportMin.matches);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [scrollTop, setScrollTop] = useState(
+    document.scrollingElement.scrollTop
+  );
   const [smallScreen, setSmallScreen] = useState(!viewportMin.matches);
 
   const listener = () => {
     setWindowWidth(window.innerWidth);
     setWindowHeight(window.innerHeight);
     setSideNavOpen(viewportMin.matches);
+  };
+  const scrollListener = () => {
+    console.log(document.scrollingElement.scrollTop);
+    setScrollTop(document.scrollingElement.scrollTop);
   };
 
   useEffect(() => {
@@ -35,6 +42,11 @@ function App() {
     }
     window.addEventListener("resize", listener);
   }, [windowWidth]);
+
+  useEffect(() => {
+    console.log(document.scrollingElement);
+    document.scrollingElement.addEventListener("scroll", scrollListener);
+  }, [scrollTop]);
 
   function handleOpeningSidebar() {
     if (!sideNavOpen) {

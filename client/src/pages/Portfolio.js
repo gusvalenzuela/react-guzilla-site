@@ -3,7 +3,6 @@ import moment from "moment";
 import API from "../utils/API";
 import "./mainstyle.css";
 import Card from "../components/Card";
-import localProjects from "../utils/localProjects.json";
 import { Dimmer, Loader } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
@@ -13,7 +12,6 @@ function Portfolio() {
   document.title = `grv.Portfolio`;
   // Setting our component's initial state
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [loadMessage, setLoadMessage] = useState(
     "loading portfolio, shouldn't be long."
   );
@@ -33,7 +31,7 @@ function Portfolio() {
     API.getProjects()
       .then((res) => {
         if (!res.data || res.data.length < 1) {
-          res.data = localProjects;
+          res.data = [];
         }
         loadGithubData(res.data);
       })
@@ -51,7 +49,6 @@ function Portfolio() {
         });
       }
       setProjects(data);
-      setLoading(false);
     });
   }
 
@@ -106,20 +103,22 @@ function Portfolio() {
       className="container-fluid p-0"
     >
       <div className="row justify-content-end m-0">
-        {projects.length
-          ? projects.map((Project, index) => (
+        {projects.length ? (
+          <>
+            {projects.map((Project, index) => (
               // card requires a key [has default image src "defaultimage01.jpg" if none given]
               <Card key={index} imgSrc={Project.img_src}>
                 <h2>{Project.title}</h2>
-                <p style={{ opacity: ".42" }}>{Project.libraries}</p>
-                <p style={{ fontSize: "1.1rem" }}>{Project.lead}</p>
                 {Project.updated_at ? (
-                  <p >
+                  <p style={{ float: "right", color: "#ffffffa4" }}>
                     Updated {moment(Project.updated_at).fromNow()}
                   </p>
                 ) : (
                   ""
                 )}
+                <p style={{ color: "#ffffffa4" }}>{Project.libraries}</p>
+                <p style={{ fontSize: "1.1rem" }}>{Project.lead}</p>
+
                 <a
                   href={Project.app_url}
                   rel="noopener noreferrer"
@@ -135,17 +134,15 @@ function Portfolio() {
                   <i className="fa fa-github"> code</i>
                 </a>
               </Card>
-            ))
-          : ""}
-
-        {loading ? (
+            ))}
+            <ResumeCard />
+          </>
+        ) : (
           <Dimmer className="portfolio-dimmer" active>
             <Loader indeterminate inline="centered" size="large">
               {loadMessage}
             </Loader>
           </Dimmer>
-        ) : (
-          <ResumeCard />
         )}
       </div>
     </div>

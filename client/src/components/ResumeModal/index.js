@@ -13,10 +13,10 @@ const ResumeModal = ({ Button }) => {
         }}
         as="iframe"
         // className="lazyload"
-        src="https://drive.google.com/file/d/1BAKRO71SHDIP6wDSVzL1A7WOHWOJBcJj/preview"
+        src="https://drive.google.com/file/d/1iUYuisPQVyiCGgcuz1awe31KP16D7bI9/view"
         height="95%"
         style={{ display: `${loading ? "none" : ""}` }}
-        title="Gustavo ValenSzuela Resume DOCX"
+        title="Gustavo Valenzuela Resume DOCX"
       ></Modal.Content>
 
       {loading ? (
