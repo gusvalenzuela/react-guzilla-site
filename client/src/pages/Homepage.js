@@ -47,7 +47,7 @@ function Homepage({ windowHeight, windowWidth }) {
         </div>
       </div>
       <BottomChevron
-        visible={scrollTop <= 20 ? true : false}
+        visible={scrollTop <= 30 ? true : false}
         windowWidth={windowWidth}
       />
 
