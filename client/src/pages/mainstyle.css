@@ -244,6 +244,7 @@ body {
   position: relative !important;
   z-index: 1 !important;
   padding-top: 25% !important;
+  height: 100% !important;
 }
 
 .contact-form {
@@ -257,6 +258,7 @@ body {
 #contact-container {
   background: var(--color-white) !important;
   color: var(--main-black) !important;
+  /* height: 100% !important; */
 }
 .contact-page-icons {
   list-style: none;

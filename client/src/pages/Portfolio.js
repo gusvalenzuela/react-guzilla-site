@@ -93,59 +93,57 @@ function Portfolio() {
     changeLoadingMsg();
   }, []);
 
-  return (
-    <div
-      onClick={() => {
-        setKC("run");
-        KonamiCode = [];
-      }}
-      role="main"
-      className="container-fluid p-0"
-    >
-      <div className="row justify-content-end m-0">
-        {projects.length ? (
-          <>
-            {projects.map((Project, index) => (
-              // card requires a key [has default image src "defaultimage01.jpg" if none given]
-              <Card key={index} imgSrc={Project.img_src}>
-                <h2>{Project.title}</h2>
-                {Project.updated_at ? (
-                  <p style={{ float: "right", color: "#ffffffa4" }}>
-                    Updated {moment(Project.updated_at).fromNow()}
-                  </p>
-                ) : (
-                  ""
-                )}
-                <p style={{ color: "#ffffffa4" }}>{Project.libraries}</p>
-                <p style={{ fontSize: "1.1rem" }}>{Project.lead}</p>
+  return projects.length ? (
+    <>
+      <div
+        onClick={() => {
+          setKC("run");
+          KonamiCode = [];
+        }}
+        role="main"
+        className="container-fluid p-0"
+      >
+        <div className="row justify-content-end m-0">
+          {projects.map((Project, index) => (
+            // card requires a key [has default image src "defaultimage01.jpg" if none given]
+            <Card key={index} imgSrc={Project.img_src}>
+              <h2>{Project.title}</h2>
+              {Project.updated_at ? (
+                <p style={{ float: "right", color: "#ffffffa4" }}>
+                  Updated {moment(Project.updated_at).fromNow()}
+                </p>
+              ) : (
+                ""
+              )}
+              <p style={{ color: "#ffffffa4" }}>{Project.libraries}</p>
+              <p style={{ fontSize: "1.1rem" }}>{Project.lead}</p>
 
-                <a
-                  href={Project.app_url}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i className="fa fa-chevron-right"> open</i>
-                </a>
-                <a
-                  href={Project.repo_url}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <i className="fa fa-github"> code</i>
-                </a>
-              </Card>
-            ))}
-            <ResumeCard />
-          </>
-        ) : (
-          <Dimmer className="portfolio-dimmer" active>
-            <Loader indeterminate inline="centered" size="large">
-              {loadMessage}
-            </Loader>
-          </Dimmer>
-        )}
+              <a
+                href={Project.app_url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <i className="fa fa-chevron-right"> open</i>
+              </a>
+              <a
+                href={Project.repo_url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <i className="fa fa-github"> code</i>
+              </a>
+            </Card>
+          ))}
+          <ResumeCard />
+        </div>
       </div>
-    </div>
+    </>
+  ) : (
+    <Dimmer role="main"  active>
+      <Loader indeterminate inline="centered" size="large">
+        {loadMessage}
+      </Loader>
+    </Dimmer>
   );
 }
 
