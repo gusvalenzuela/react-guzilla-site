@@ -4,39 +4,61 @@ import "semantic-ui-css/semantic.min.css";
 import API from "../utils/API";
 
 function Contact() {
-  document.title = `gusVALENZUELA | Contact`;
-  const emailOptions = {
+  document.title = `grv.Contact`;
+  const emailDefault = {
     name: "",
     email: "",
     message: "",
     success: "",
     btnMsg: "Send",
+    attempts: 0,
   };
-  const [emailData, setEmailData] = useState(emailOptions);
+  const [emailData, setEmailData] = useState(emailDefault);
 
   function handleFormSubmission(event) {
     event.preventDefault();
 
-    setEmailData({ ...emailData, btnMsg: "Sending..." });
+    // name & email is "required"
+    if ((emailData.name.trim() && emailData.email.trim()) !== "") {
+      setEmailData({ ...emailData, btnMsg: "Sending..." });
 
-    API.sendContactEmail(emailData).then((res) => {
-      if ((res.data = `success`)) {
-        setEmailData({ ...emailData, success: true, btnMsg: "Sent" });
-      } else {
-        setEmailData({ ...emailData, success: false, btnMsg: "Fail" });
-      }
-      // after 5 secs, form data and message/toast is cleared
+      API.sendContactEmail(emailData).then((res) => {
+        if ((res.data = `success`)) {
+          setEmailData({ ...emailData, success: true, btnMsg: "Sent" });
+        } else {
+          setEmailData({ ...emailData, success: false, btnMsg: "Fail" });
+        }
+        // after 5 secs, form data and message/toast is cleared
+        setTimeout(() => {
+          setEmailData(emailDefault);
+        }, 5000);
+      });
+    } else {
+      // keep count of attempts at sending without populating required fields
+      // used in displaying error border around field(s)
+      setEmailData({ ...emailData, attempts: emailData.attempts + 1 });
+
+      // clearing attempts after 5 secs (removing error border)
       setTimeout(() => {
-        setEmailData(emailOptions);
-      }, 5000);
-    });
+        setEmailData({ ...emailData, attempts: 0 });
+      }, 2500);
+    }
   }
   return (
     <div className="contact-container">
       <Form action="#" className="contact-form">
         <Form.Field>
-          <label>Name</label>
+          <label>
+            Name{" "}
+            <span style={{ color: "#ff0000ff", fontWeight: "600" }}>*</span>
+            <span style={{ float: "right" }}>* Required Fields</span>
+          </label>
           <input
+            className={`input ${
+              emailData.name === "" && emailData.attempts > 0
+                ? "display-error"
+                : ""
+            }`}
             id="name"
             name="name"
             type="text"
@@ -49,8 +71,16 @@ function Contact() {
           />
         </Form.Field>
         <Form.Field>
-          <label>Email</label>
+          <label>
+            Email{" "}
+            <span style={{ color: "#ff0000ff", fontWeight: "600" }}>*</span>
+          </label>
           <input
+            className={`input ${
+              emailData.email === "" && emailData.attempts > 0
+                ? "display-error"
+                : ""
+            }`}
             id="email"
             name="email"
             type="email"
@@ -65,11 +95,12 @@ function Contact() {
         <Form.Field>
           <label>Message</label>
           <textarea
+            className="input"
             id="message"
             name="message"
             type="text"
             maxLength="4096"
-            placeholder="Hi there!"
+            placeholder="Hello there!"
             onChange={(e) =>
               setEmailData({ ...emailData, message: e.target.value })
             }
@@ -86,7 +117,7 @@ function Contact() {
               fontWeight: "800",
             }}
           >
-            <p>Thank you, {emailData.name}! Message successfully sent.</p>
+            <p>Thank you{`, ${emailData.name}`}! Message successfully sent.</p>
           </div>
           <Button
             type="submit"
@@ -97,8 +128,15 @@ function Contact() {
         </div>
       </Form>
       <section style={{ textAlign: "center", marginTop: "1rem" }}>
-        <p>Other ways to contact me</p>
+        <p>Alternatively,</p>
         <div className="contact-page-icons">
+          <a
+            href="mailto:gusrvalenzuela@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-envelope-o" aria-hidden="true"></i>
+          </a>
           <a
             href="https://github.com/gusvalenzuela"
             target="_blank"
@@ -120,6 +158,13 @@ function Contact() {
           >
             <i className="fa fa-twitter" aria-hidden="true"></i>
           </a>
+          {/* <a
+            href="https://twitter.com/vrsulo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa fa-twitter" aria-hidden="true"></i>
+          </a> */}
         </div>
       </section>
     </div>
