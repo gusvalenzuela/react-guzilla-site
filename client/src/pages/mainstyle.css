@@ -193,8 +193,8 @@ body {
 }
 
 .text-link {
-  color: var(--color2);
-  font-weight: 700;
+  color: #4183c4!important;
+  font-weight: 600 !important;
 }
 
 #about-me {

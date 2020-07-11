@@ -49,14 +49,14 @@ function Homepage({ windowHeight, windowWidth, smallScreen }) {
         </div>
       </div>
       <div className="homepage-header-btns">
-        <Button.Group color="red" size={smallScreen ? "medium" : "massive"}>
+        <Button.Group color="red" size={smallScreen ? "medium" : "huge"}>
           <Button as="a" href="/portfolio">Portfolio</Button>
           <Button.Or text="" />
           <Button as="a" href="/contact">Contact</Button>
         </Button.Group>
       </div>
       <BottomChevron
-        visible={scrollTop <= 42 ? true : false}
+        visible={scrollTop <= 54 ? true : false}
         windowWidth={windowWidth}
       />
 

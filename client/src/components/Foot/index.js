@@ -4,7 +4,6 @@ import "./style.css";
 function Foot() {
   return (
     <footer className="footer">
-      <div className="footer-top">
         <div className="footer-left">2020 &copy; gr\^_^/</div>
         <div className="footer-right">
           <div className="footer-icons">
@@ -50,8 +49,9 @@ function Foot() {
             </ul>
           </div>
         </div>
+      {/* <div className="footer-top">
       </div>
-      <div className="footer-bottom">Porudly builAWj</div>
+      <div className="footer-bottom">Porudly builAWj</div> */}
     </footer>
   );
 }

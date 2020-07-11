@@ -3,6 +3,7 @@
   /* box-shadow: pos-x pos-y blur spread color */
   box-shadow: 0px 5px 3px -4px #ffffff; 
   border: 1px transparent !important;
+  border-radius: 0 !important;
   padding: 0;
   margin: 0.296rem;
 }

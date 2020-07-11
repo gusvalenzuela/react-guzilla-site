@@ -11,7 +11,7 @@ import ResumeCard from "../components/ResumeCard";
 function Portfolio() {
   document.title = `grv.Portfolio`;
   const PortfolioVersion = 2; // change the version when changes to projectsDB are made so cache is updated
-  
+
   // Setting our component's initial state
   const [projects, setProjects] = useState([]);
   const [loadMessage, setLoadMessage] = useState(
@@ -69,7 +69,6 @@ function Portfolio() {
 
     if (localStorageProjects && localStorageProjects.length > 0) {
       return loadGithubData(localStorageProjects);
-      //
     }
 
     API.getProjects()

@@ -46,7 +46,7 @@ function Contact() {
   }
   return (
     <div id="contact-container" role="main">
-      <Form action="#" className="contact-form">
+      <Form action="#" className="contact-form" id="contact-form">
         <Form.Field>
           <label>
             Name{" "}

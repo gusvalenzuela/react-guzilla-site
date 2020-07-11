@@ -7,7 +7,7 @@
   bottom: 50px;
   font-size: 50px;
   text-align: center;
-  transition: ease 0.5s;
+  transition: "top .3s ease-out, bottom .3s ease-out";
   /* margin-right: 0em; */
   /* cursor: pointer; */
   /* padding: 3.145rem 0.5rem 3.145rem .25rem; */

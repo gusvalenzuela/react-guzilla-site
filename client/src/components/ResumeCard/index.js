@@ -7,6 +7,17 @@ function ResumeCard() {
   return (
     <div className="card-semantic col-12 col-md-10 col-xl-6">
       <h3>Want to reach out to me?</h3>
+
+      <p>
+        You may use{" "}
+        <a
+          alt="Contact page"
+          href="/contact/#contact-form"
+          className="text-link"
+        >
+          this form
+        </a> on my contact page or check out these other links:
+      </p>
       <List divided relaxed="very">
         <List.Item>
           <List.Icon name="sticky note" size="large" verticalAlign="middle" />
@@ -20,6 +31,7 @@ function ResumeCard() {
           <List.Icon name="github" size="large" verticalAlign="middle" />
           <List.Content>
             <List.Header
+              alt="GitHub Profile"
               as="a"
               rel="noopener noreferrer"
               target="_blank"
@@ -33,6 +45,7 @@ function ResumeCard() {
           <List.Icon name="linkedin" size="large" verticalAlign="middle" />
           <List.Content>
             <List.Header
+              alt="LinkedIn Profile"
               as="a"
               rel="noopener noreferrer"
               target="_blank"
@@ -50,6 +63,7 @@ function ResumeCard() {
           />
           <List.Content>
             <List.Header
+              alt="Email gusrvalenzuela@gmail.com"
               as="a"
               rel="noopener noreferrer"
               target="_blank"

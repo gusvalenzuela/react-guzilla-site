@@ -17,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.2",
+    "morgan": "1.10.0",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
@@ -25,12 +26,10 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
-    "filestack-react": "3.1.0",
     "googleapis": "^52.1.0",
     "if-env": "^1.0.4",
     "lazysizes": "5.2.2",
     "mongoose": "^5.3.16",
-    "morgan": "1.10.0",
     "nodemailer": "^6.4.10"
   }
 }

@@ -6,6 +6,7 @@ import "./style.css";
 function SidebarToggle({ isOpen, handleOpeningSidebar, smallScreen }) {
   return (
     <button
+      aria-label="Toggle Sidebar"
       className={`sidebar-toggle ${
         !isOpen ? "sidebar-closed" : "sidebar-opened"
       } ${smallScreen ? "small-screen" : ""}`}
