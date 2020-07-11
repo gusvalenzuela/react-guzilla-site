@@ -1,15 +1,15 @@
-.resume-card {
-  background-color: var(--main-black);
-  font-size: 18px;
+.card-semantic {
+  background-color: var(--main-black) !important;
   flex-direction: column !important;
+  margin: .444rem;
 }
-.resume-card a {
+.card-semantic a {
   color: #fff;
 }
-.resume-card li {
+.card-semantic li {
   list-style: none;
   padding: 1rem 0;
 }
-.resume-card ul {
+.card-semantic ul {
   padding-left: 1rem;
 }

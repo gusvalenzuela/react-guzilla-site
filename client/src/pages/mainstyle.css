@@ -46,7 +46,7 @@ body {
   /* background: url(../images/subtlenet2.png); */
   background: var(--color-white);
 }
-.homepage-header-btns{
+.homepage-header-btns {
   position: absolute;
   bottom: 3.375rem;
   right: 1.5rem;
@@ -331,6 +331,7 @@ div[role="main"] {
 div[role="main"] > .portfolio {
   background: var(--main-black) !important;
   color: #ffffff !important;
+  padding: 3.375rem 1rem;
 }
 div[role="dialog"] {
   background: var(--main-black) !important;
@@ -342,14 +343,16 @@ div[role="dialog"] {
   .contact-form {
     width: 90%;
   }
-  .top-bar-custom{
+  .top-bar-custom {
     padding-left: 2.25rem;
   }
-  .homepage-header-btns{
+  .homepage-header-btns {
     bottom: 1.5rem;
     right: 1.5rem;
   }
-
+  .portfolio {
+    padding: 0 !important;
+  }
   .profile-photo {
     max-width: 100%;
     padding: 2.25rem;
@@ -361,7 +364,7 @@ div[role="dialog"] {
   .profile-photo {
     max-width: 250px;
   }
-  .contact-form{
+  .contact-form {
     width: 800px;
   }
   #about-me {

@@ -10,20 +10,44 @@ import ResumeCard from "../components/ResumeCard";
 
 function Portfolio() {
   document.title = `grv.Portfolio`;
+  const PortfolioVersion = 2; // change the version when changes to projectsDB are made so cache is updated
+  
   // Setting our component's initial state
   const [projects, setProjects] = useState([]);
   const [loadMessage, setLoadMessage] = useState(
     "loading portfolio, shouldn't be long."
   );
 
-   // "on  mounty"
-   useEffect(() => {
+  // "on  mounty"
+  useEffect(() => {
     // Load all Projects and store them with setProjects
     loadProjects();
     // load timeout for changing message, notifying user loading is taking unusually long
     changeLoadingMsg();
+    // clear any old projects cache
+    clearOldProjectsCache();
   }, []);
 
+  // listening to projects
+  useEffect(() => {
+    saveProjCache();
+  }, [projects]);
+
+  function saveProjCache() {
+    let sanitizedProjects = projects.map((i) => {
+      delete i._id;
+      return i;
+    });
+    localStorage.setItem(
+      `gusvalenzuela.com-cache-v${PortfolioVersion}-projects`,
+      JSON.stringify(sanitizedProjects)
+    );
+  }
+  function clearOldProjectsCache() {
+    for (let i = 0; i < PortfolioVersion; i++) {
+      localStorage.removeItem(`gusvalenzuela.com-cache-v${i}-projects`);
+    }
+  }
   function changeLoadingMsg() {
     setTimeout(() => {
       setLoadMessage("loading portfolio, any second now...");
@@ -36,6 +60,18 @@ function Portfolio() {
   }
   // Loads all Projects and sets them to Projects
   function loadProjects() {
+    //checking to see if a local projects obj exists, and using that
+    const localStorageProjects = JSON.parse(
+      localStorage.getItem(
+        `gusvalenzuela.com-cache-projects-v${PortfolioVersion}`
+      )
+    );
+
+    if (localStorageProjects && localStorageProjects.length > 0) {
+      return loadGithubData(localStorageProjects);
+      //
+    }
+
     API.getProjects()
       .then((res) => {
         if (!res.data || res.data.length < 1) {
@@ -45,18 +81,23 @@ function Portfolio() {
       })
       .catch((err) => console.log(err));
   }
-  function loadGithubData(data) {
-    API.getGitUpdateData().then((gitData) => {
-      if (gitData !== `error`) {
-        gitData.data.forEach((item) => {
-          data.forEach((proj) => {
+
+  function loadGithubData(Projects) {
+    API.getGitUpdateData().then((repos) => {
+      if (repos !== `error`) {
+        // looping through all repos' git data
+        repos.data.forEach((item) => {
+          // adding last updated date to each of projects in state
+          Projects.forEach((proj) => {
             if (proj.repo_name === item.name) {
               proj.updated_at = item.updated_at;
             }
           });
         });
       }
-      setProjects(data);
+
+      // set projects to local or pulled Projects
+      setProjects(Projects);
     });
   }
 
@@ -94,8 +135,6 @@ function Portfolio() {
       };
     }
   }, [KC, KonamiCode]);
-
- 
 
   return projects.length ? (
     <>
