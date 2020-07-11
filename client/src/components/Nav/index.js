@@ -3,7 +3,7 @@ import "./style.css";
 
 function Nav() {
   return (
-    <nav className="sidenavbar">
+    <nav className="sidenavbar" id="sidenavbar">
       <ul className="navbar-nav">
         <li className="">
           <a className="navbar-togglerz" href="/">

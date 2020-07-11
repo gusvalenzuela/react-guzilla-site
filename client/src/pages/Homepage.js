@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Segment } from "semantic-ui-react";
+import { Segment, Button } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import BottomChevron from "../components/BottomChevron";
 
-function Homepage({ windowHeight, windowWidth }) {
+function Homepage({ windowHeight, windowWidth, smallScreen }) {
   document.title = `grv.Home`;
   const [scrollTop, setScrollTop] = useState(null);
 
-  // grabbing the parent element of scroll we're capturing - "on mount"
-  // setting its scrolltop value to state
+  // "on  mounty"
   useEffect(() => {
+    // grabbing the parent element of scroll we're capturing
+    // setting its scrolltop value to state
     setScrollTop(
       document.getElementById(`homepage-container`).parentElement.scrollTop
     );
+    // removing godzilla from homepage nav background
+    document.getElementById(`sidenavbar`).style =
+      "background: transparent !important;";
   }, []);
 
   const scrollListener = () => {
@@ -27,8 +31,6 @@ function Homepage({ windowHeight, windowWidth }) {
     document
       .getElementById(`homepage-container`)
       .parentElement.addEventListener(`scroll`, scrollListener);
-
-    console.log(scrollTop);
   }, [scrollTop]);
 
   return (
@@ -46,20 +48,27 @@ function Homepage({ windowHeight, windowWidth }) {
           </p>
         </div>
       </div>
+      <div className="homepage-header-btns">
+        <Button.Group color="red" size={smallScreen ? "medium" : "massive"}>
+          <Button as="a" href="/portfolio">Portfolio</Button>
+          <Button.Or text="" />
+          <Button as="a" href="/contact">Contact</Button>
+        </Button.Group>
+      </div>
       <BottomChevron
-        visible={scrollTop <= 30 ? true : false}
+        visible={scrollTop <= 42 ? true : false}
         windowWidth={windowWidth}
       />
 
       <div className="row intro-para-row justify-content-center m-0">
-        <div className="col-md-10 col-xl-6" id="about-me">
+        <div className="col-10 col-xl-7" id="about-me">
           <header className="welcome-header">Welcome to my site.</header>
           <img
             src="./assets/images/profilephoto3.jpg"
             alt="Headshot of moi"
             className="profile-photo"
           ></img>
-          <p style={{ textAlign: "justify" }}>
+          <p>
             Since an adolescent, I have been fascinated with technology,
             computers, and the world wide web. I made static webpages in my
             youth and even got to deploy some flash-centric wonders. Over the
@@ -82,41 +91,49 @@ function Homepage({ windowHeight, windowWidth }) {
             page And shoot me an email. Hope to hear from you! Have a wonderful
             day =]
           </p>
-
-          <div className="col" id="skillsbox">
-            <Segment>
-              <p>Technical Skills and Experience</p>
-            </Segment>
-            <p className="index-quoteblock-vertical-name">
-              <b>FRONT END</b>: HTML5, CSS3, Bootstrap, React
-            </p>
-            <p className="index-quoteblock-vertical-name">
-              <b>BACK END</b>: Node, MySQL, MongoDB, Express, Mongoose,
-              Sequelize, OAuth2
-            </p>
-            <p className="index-quoteblock-vertical-name">
-              <b>OTHER</b>: JavaScript, Git, SQL, JSON, GitHub, MVC, AJAX,
-              Handlebars, jQuery, REST, APIs, UI
-            </p>
-          </div>
         </div>
       </div>
-      <div className="row justify-content-center m-0" id="quotebox">
-        <div className="col col-md-6 col-lg-4">
-          <Segment raised>
+      <div className="row justify-content-center m-0 skillsbox">
+        <div className="col-10 col-lg-2">
+          <Segment inverted style={{ textAlign: "right", height: "100%" }}>
+            <p>Technical Skills and Experience</p>
+          </Segment>
+        </div>
+        <div className="col-10 col-lg-5">
+          <Segment vertical>
+            <b>FRONT END</b>: HTML5, CSS3, Bootstrap, React
+          </Segment>
+          <Segment vertical>
+            <b>BACK END</b>: Node, MySQL, MongoDB, Express, Mongoose, Sequelize
+          </Segment>
+          <Segment vertical>
+            <b>OTHER</b>: JavaScript, Git, SQL, JSON, GitHub, MVC, AJAX,
+            Handlebars, jQuery, REST, APIs, UI, OAuth2
+          </Segment>
+        </div>
+      </div>
+      <div className="row quotebox justify-content-center m-0">
+        <div>
+          <Segment className="index-quoteblock-vertical-quote">
             <p>
-              "And remember, the world is possibility if only you'll discover
-              it."{" "}
+              "And remember, the world is possibility{" "}
+              <i>
+                <b>[sic]</b>
+              </i>{" "}
+              if only you'll discover it."{" "}
             </p>
           </Segment>
-          <img
-            className="index-quoteblock-vertical-avatar"
-            src="./assets/images/ellison-avatar.jpg"
-            alt=""
-          ></img>
-          <p className="index-quoteblock-vertical-name">
-            Ralph Ellison, <i>Invisible Man</i>
-          </p>
+          <div className="index-quoteblock-vertical-person">
+            <img
+              className="index-quoteblock-vertical-avatar"
+              src="./assets/images/ellison-avatar.jpg"
+              alt=""
+            />
+            <div>
+              <p className="index-quoteblock-vertical-name">Ralph Ellison</p>
+              <p className="index-quoteblock-vertical-info">Invisible Man</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,13 @@
 .bottom-chevron {
   border: none;
-  color: var(--color-white);
+  color: #757575;
   opacity: 0.8;
   background: transparent;
   position: fixed;
   bottom: 50px;
   font-size: 50px;
   text-align: center;
+  transition: ease 0.5s;
   /* margin-right: 0em; */
   /* cursor: pointer; */
   /* padding: 3.145rem 0.5rem 3.145rem .25rem; */

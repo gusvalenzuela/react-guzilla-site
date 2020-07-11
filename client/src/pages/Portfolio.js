@@ -16,6 +16,14 @@ function Portfolio() {
     "loading portfolio, shouldn't be long."
   );
 
+   // "on  mounty"
+   useEffect(() => {
+    // Load all Projects and store them with setProjects
+    loadProjects();
+    // load timeout for changing message, notifying user loading is taking unusually long
+    changeLoadingMsg();
+  }, []);
+
   function changeLoadingMsg() {
     setTimeout(() => {
       setLoadMessage("loading portfolio, any second now...");
@@ -87,11 +95,7 @@ function Portfolio() {
     }
   }, [KC, KonamiCode]);
 
-  // Load all Projects and store them with setProjects
-  useEffect(() => {
-    loadProjects();
-    changeLoadingMsg();
-  }, []);
+ 
 
   return projects.length ? (
     <>

@@ -64,7 +64,12 @@ function App() {
               <Head textContent="HOME" />
               <Homepage
                 windowHeight={windowHeight}
-                windowWidth={smallScreen || !sideNavOpen ? windowWidth - 32 : windowWidth - 180}
+                smallScreen={smallScreen}
+                windowWidth={
+                  smallScreen || !sideNavOpen
+                    ? windowWidth - 32
+                    : windowWidth - 180
+                }
               />
             </Route>
             <Route exact path={["/portfolio", "/portfolios", "/projects"]}>

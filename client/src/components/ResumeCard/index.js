@@ -5,7 +5,7 @@ import { List } from "semantic-ui-react";
 
 function ResumeCard() {
   return (
-    <div className="card-semantic col-12 col-md-6 col-xl-4">
+    <div className="card-semantic col-12 col-md-5 col-xl-3">
       <List divided relaxed="very">
         <List.Item>
           <List.Icon name="sticky note" size="large" verticalAlign="middle" />
