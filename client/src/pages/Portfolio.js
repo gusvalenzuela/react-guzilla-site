@@ -82,6 +82,10 @@ function Portfolio() {
   }
 
   function loadGithubData(Projects) {
+    // set Projects for quick rendering
+    // git data can be updated/rendered later
+    setProjects(Projects);
+
     API.getGitUpdateData().then((repos) => {
       if (repos !== `error`) {
         // looping through all repos' git data
@@ -93,10 +97,9 @@ function Portfolio() {
             }
           });
         });
+        setProjects(Projects); // set projects to local or pulled Projects after updating with git data
       }
 
-      // set projects to local or pulled Projects
-      setProjects(Projects);
     });
   }
 
@@ -150,13 +153,10 @@ function Portfolio() {
             // card requires a key [has default image src "defaultimage01.jpg" if none given]
             <Card key={index} imgSrc={Project.img_src}>
               <h2>{Project.title}</h2>
-              {Project.updated_at ? (
-                <p style={{ float: "right", color: "#ffffffa4" }}>
-                  Updated {moment(Project.updated_at).fromNow()}
-                </p>
-              ) : (
-                ""
-              )}
+              <p style={{ float: "right", color: "#ffffffa4" }}>
+                {Project.updated_at ? `Updated ${moment(Project.updated_at).fromNow()}` : ""}
+              </p>
+
               <p style={{ color: "#ffffffa4" }}>{Project.libraries}</p>
               <p style={{ fontSize: "1.1rem" }}>{Project.lead}</p>
 

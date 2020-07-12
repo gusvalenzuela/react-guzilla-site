@@ -46,17 +46,21 @@ function Homepage({ windowHeight, windowWidth, smallScreen }) {
           <p className="subheader-index" id="subheader">
             A responsive web developer for the modern world.
           </p>
+          <div className="homepage-header-btns">
+            <Button.Group size={smallScreen ? "medium" : "big"}>
+              <Button color="red" as="a" href="/portfolio">
+                Portfolio
+              </Button>
+              <Button.Or text="" />
+              <Button inverted color="red" as="a" href="/contact">
+                Contact
+              </Button>
+            </Button.Group>
+          </div>
         </div>
       </div>
-      <div className="homepage-header-btns">
-        <Button.Group color="red" size={smallScreen ? "medium" : "huge"}>
-          <Button as="a" href="/portfolio">Portfolio</Button>
-          <Button.Or text="" />
-          <Button as="a" href="/contact">Contact</Button>
-        </Button.Group>
-      </div>
       <BottomChevron
-        visible={scrollTop <= 54 ? true : false}
+        visible={scrollTop <= 66 ? true : false}
         windowWidth={windowWidth}
       />
 

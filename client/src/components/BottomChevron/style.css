@@ -1,4 +1,5 @@
 .bottom-chevron {
+  display: inline;
   border: none;
   color: #757575;
   opacity: 0.8;
@@ -7,7 +8,7 @@
   bottom: 50px;
   font-size: 50px;
   text-align: center;
-  transition: "top .3s ease-out, bottom .3s ease-out";
+  transition: "all 1.3s ease-out";
   /* margin-right: 0em; */
   /* cursor: pointer; */
   /* padding: 3.145rem 0.5rem 3.145rem .25rem; */

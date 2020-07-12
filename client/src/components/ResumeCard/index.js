@@ -6,17 +6,18 @@ import { List } from "semantic-ui-react";
 function ResumeCard() {
   return (
     <div className="card-semantic col-12 col-md-10 col-xl-6">
-      <h3>Want to reach out to me?</h3>
+      <h3>Want to reach me?</h3>
 
       <p>
-        You may use{" "}
+        Use{" "}
         <a
           alt="Contact page"
           href="/contact/#contact-form"
           className="text-link"
         >
           this form
-        </a> on my contact page or check out these other links:
+        </a>{" "}
+        on my contact page or check out these other links:
       </p>
       <List divided relaxed="very">
         <List.Item>

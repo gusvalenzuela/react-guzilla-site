@@ -41,15 +41,22 @@ body {
   min-height: 100%;
   background: var(--main-black);
 }
+.resume-modal-iframe{
+  height: 95%;
+  height: -webkit-fill-available;
+}
 
 .bg-subtlenet {
   /* background: url(../images/subtlenet2.png); */
   background: var(--color-white);
 }
-.homepage-header-btns {
+/* .homepage-header-btns {
   position: absolute;
   bottom: 3.375rem;
   right: 1.5rem;
+} */
+.or-button{
+  background: #020202;
 }
 .intro-para-row {
   background: var(--color3) !important;
@@ -301,23 +308,19 @@ body {
 
 .contact-form {
   margin: auto;
-  padding: 2.25rem 1rem 1rem;
+  padding: 3.375rem 1rem;
   width: 75%;
 }
 .contact-form .input {
   box-shadow: 1px 1px #02020233 inset !important;
 }
+.contact-form label {
+  font-size: 1.1rem !important;
+}
 #contact-container {
   background: var(--color-white) !important;
   color: var(--main-black) !important;
   height: 100% !important;
-}
-.contact-page-icons {
-  list-style: none;
-}
-.contact-page-icons > a {
-  margin-right: 1rem;
-  font-size: xx-large;
 }
 .display-error {
   border: 1px var(--main-red) solid !important;

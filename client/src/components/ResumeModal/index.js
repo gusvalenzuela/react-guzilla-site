@@ -12,11 +12,12 @@ const ResumeModal = ({ Button }) => {
           setLoading(false);
         }}
         as="iframe"
-        // className="lazyload"
-        src="https://drive.google.com/file/d/1iUYuisPQVyiCGgcuz1awe31KP16D7bI9/view"
-        height="95%"
+        className="resume-modal-iframe"
+        src="https://drive.google.com/file/d/1iUYuisPQVyiCGgcuz1awe31KP16D7bI9/preview"
+        width="100%"
         style={{ display: `${loading ? "none" : ""}` }}
-        title="Gustavo Valenzuela Resume DOCX"
+        title="Gustavo Valenzuela Resume"
+        allowfullscreen
       ></Modal.Content>
 
       {loading ? (

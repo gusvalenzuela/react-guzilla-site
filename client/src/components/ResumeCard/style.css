@@ -1,15 +1,12 @@
 .card-semantic {
   background-color: var(--main-black) !important;
-  flex-direction: column !important;
-  margin: .444rem;
+  /* flex-direction: column !important; */
+  margin: 0.444rem;
+  padding: 1.5rem;
 }
 .card-semantic a {
   color: #fff;
 }
-.card-semantic li {
-  list-style: none;
-  padding: 1rem 0;
-}
-.card-semantic ul {
-  padding-left: 1rem;
+div[role="list"] {
+  padding: 1rem 0 !important;
 }

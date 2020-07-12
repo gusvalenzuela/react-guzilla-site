@@ -43,6 +43,7 @@
   /* .card-img-overlay {
     font-size: xx-large;
   } */
+  
 }
 @media screen and (max-width: 576px) {
   .card-img-overlay {
@@ -50,5 +51,6 @@
   }
   .card {
     margin: auto;
+    box-shadow: none !important; 
   }
 }

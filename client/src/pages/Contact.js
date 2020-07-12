@@ -17,6 +17,7 @@ function Contact() {
 
   function handleFormSubmission(event) {
     event.preventDefault();
+    document.querySelector(`.send-button`).toggleAttribute(`loading`);
 
     // name & email is "required"
     if ((emailData.name.trim() && emailData.email.trim()) !== "") {
@@ -45,8 +46,9 @@ function Contact() {
     }
   }
   return (
-    <div id="contact-container" role="main">
+    <div id="contact-container">
       <Form action="#" className="contact-form" id="contact-form">
+        <h2>Send an email:</h2>
         <Form.Field>
           <label>
             Name{" "}
@@ -120,6 +122,7 @@ function Contact() {
             <p>Thank you{`, ${emailData.name}`}! Message successfully sent.</p>
           </div>
           <Button
+            className="send-button"
             type="submit"
             secondary
             content={emailData.btnMsg}
@@ -131,41 +134,42 @@ function Contact() {
       <section style={{ textAlign: "center", marginTop: "1rem" }}>
         <p>Alternatively,</p>
         <div className="contact-page-icons">
-          <a
+          <Button
+            as="a"
             href="mailto:gusrvalenzuela@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <i className="fa fa-envelope-o" aria-hidden="true"></i>
-          </a>
-          <a
+            circular
+            color="red"
+            icon="envelope"
+          />
+          <Button
+            as="a"
             href="https://github.com/gusvalenzuela"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <i className="fa fa-github" aria-hidden="true"></i>
-          </a>
-          <a
+            circular
+            color="github"
+            icon="github"
+          />
+          <Button
+            as="a"
             href="https://www.linkedin.com/in/gus-valenzuela-b73b0296/"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <i className="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a
+            circular
+            color="linkedin"
+            icon="linkedin"
+          />
+          <Button
+            as="a"
             href="https://twitter.com/vrsulo"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <i className="fa fa-twitter" aria-hidden="true"></i>
-          </a>
-          {/* <a
-            href="https://twitter.com/vrsulo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa fa-twitter" aria-hidden="true"></i>
-          </a> */}
+            circular
+            color="twitter"
+            icon="twitter"
+          />
         </div>
       </section>
     </div>

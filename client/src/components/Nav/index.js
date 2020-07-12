@@ -22,7 +22,7 @@ function Nav() {
         </li>
         <li>
           <a className="navbar-togglerz" href="/contact">
-            contact,
+            contact.
           </a>
         </li>
         {/* <li>
