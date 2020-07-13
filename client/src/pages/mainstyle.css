@@ -41,10 +41,9 @@ body {
   min-height: 100%;
   background: var(--main-black);
 }
-.resume-modal-iframe{
-  height: 95%;
-  height: -webkit-fill-available;
-}
+/* .resume-modal-iframe{
+  height: 92%;
+} */
 
 .bg-subtlenet {
   /* background: url(../images/subtlenet2.png); */
@@ -55,9 +54,6 @@ body {
   bottom: 3.375rem;
   right: 1.5rem;
 } */
-.or-button{
-  background: #020202;
-}
 .intro-para-row {
   background: var(--color3) !important;
   margin: 0 !important;

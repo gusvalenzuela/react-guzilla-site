@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button } from "semantic-ui-react";
+import { Form, Button, Label } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import API from "../utils/API";
 
@@ -17,7 +17,6 @@ function Contact() {
 
   function handleFormSubmission(event) {
     event.preventDefault();
-    document.querySelector(`.send-button`).toggleAttribute(`loading`);
 
     // name & email is "required"
     if ((emailData.name.trim() && emailData.email.trim()) !== "") {
@@ -29,10 +28,10 @@ function Contact() {
         } else {
           setEmailData({ ...emailData, success: false, btnMsg: "Fail" });
         }
-        // after 5 secs, form data and message/toast is cleared
+        // after 7 secs, form data and message/toast is cleared
         setTimeout(() => {
           setEmailData(emailDefault);
-        }, 5000);
+        }, 7000);
       });
     } else {
       // keep count of attempts at sending without populating required fields
@@ -42,7 +41,7 @@ function Contact() {
       // clearing attempts after 5 secs (removing error border)
       setTimeout(() => {
         setEmailData({ ...emailData, attempts: 0 });
-      }, 2500);
+      }, 2000);
     }
   }
   return (
@@ -71,6 +70,17 @@ function Contact() {
             value={emailData.name}
             required
           />
+          <Label
+            style={{
+              display: `${
+                emailData.name === "" && emailData.attempts > 0 ? "" : "none"
+              }`,
+            }}
+            pointing
+            prompt
+          >
+            Please enter a name
+          </Label>
         </Form.Field>
         <Form.Field>
           <label>
@@ -93,6 +103,17 @@ function Contact() {
             value={emailData.email}
             required
           />
+          <Label
+            style={{
+              display: `${
+                emailData.email === "" && emailData.attempts > 0 ? "" : "none"
+              }`,
+            }}
+            pointing
+            prompt
+          >
+            Please enter an email address
+          </Label>
         </Form.Field>
         <Form.Field>
           <label>Message</label>
