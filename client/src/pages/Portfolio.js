@@ -3,7 +3,7 @@ import moment from "moment";
 import API from "../utils/API";
 import "./mainstyle.css";
 import Card from "../components/Card";
-import { Dimmer, Loader } from "semantic-ui-react";
+import { Dimmer, Loader, Icon} from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
 import ResumeCard from "../components/ResumeCard";
@@ -173,6 +173,7 @@ function Portfolio() {
                 target="_blank"
               >
                 <i className="fa fa-github"> code</i>
+                {/* <Icon name='github'color="github" inverted size='big' /> */}
               </a>
             </Card>
           ))}
