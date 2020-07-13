@@ -157,20 +157,11 @@ function Contact() {
         <div className="contact-page-icons">
           <Button
             as="a"
-            href="mailto:gusrvalenzuela@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            circular
-            color="red"
-            icon="envelope"
-          />
-          <Button
-            as="a"
             href="https://github.com/gusvalenzuela"
             target="_blank"
             rel="noopener noreferrer"
             circular
-            color="github"
+            color="black"
             icon="github"
           />
           <Button
@@ -181,6 +172,15 @@ function Contact() {
             circular
             color="linkedin"
             icon="linkedin"
+          />
+          <Button
+            as="a"
+            href="mailto:gusrvalenzuela@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            circular
+            color="red"
+            icon="envelope"
           />
           <Button
             as="a"

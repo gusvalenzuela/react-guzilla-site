@@ -15,7 +15,7 @@ function Foot() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon name="github" color="github" inverted size="big" />
+                <Icon name="github" inverted size="big" />
               </a>
             </li>
             <li>
@@ -24,7 +24,7 @@ function Foot() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon name="linkedin" color="linkedin" inverted size="big" />
+                <Icon name="linkedin" inverted size="big" />
               </a>
             </li>
             {/* <li>
@@ -43,7 +43,7 @@ function Foot() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon name="twitter" color="twitter" inverted size="big" />
+                <Icon name="twitter" inverted size="big" />
               </a>
             </li>
             <li></li>
