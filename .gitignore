@@ -127,6 +127,7 @@ sketch
 *csv
 *xls
 MERN*
-_seed/
 
 config/
+# any folder that begins with an underscore
+_*/
