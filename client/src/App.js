@@ -80,12 +80,12 @@ function App() {
               <Head textContent="CONTACT ME" />
               <Contact />
             </Route>
-            <Route>
-              <Head textContent="OTHER" />
+            <Route exact path={"/other"}>
+              <Head textContent="OTHER!" />
               <Other />
             </Route>
             <Route>
-              <Head textContent="Uh Oh, 404!" />
+              <Head textContent="UH-OH!" />
               <NoMatch />
             </Route>
           </Switch>
