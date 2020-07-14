@@ -17,6 +17,7 @@
   margin-right: 1rem !important;
   margin-bottom: 0.5rem !important;
   margin-top: 0.25rem !important;
+  width: auto !important;
 }
 .card-img-overlay h2 {
   margin-bottom: 0.33rem;

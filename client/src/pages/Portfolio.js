@@ -165,14 +165,14 @@ function Portfolio() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <i className="fa fa-chevron-right"> open</i>
+                <Icon name="chevron circle right" > open</Icon>
               </a>
               <a
                 href={Project.repo_url}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <i className="fa fa-github"> code</i>
+                <Icon name="github"> code</Icon>
                 {/* <Icon name='github'color="github" inverted size='big' /> */}
               </a>
             </Card>

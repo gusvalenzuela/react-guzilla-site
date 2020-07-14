@@ -8,17 +8,8 @@ export default {
   getProject: function (id) {
     return axios.get("/api/projects/" + id);
   },
-  // Deletes the Project with the given id
-  deleteProject: function (id) {
-    return axios.delete("/api/projects/" + id);
-  },
-  // Saves a Project to the database
-  saveProject: function (ProjectData) {
-    return axios.post("/api/projects", ProjectData);
-  },
-  getGitUpdateData: function (repo) {
+  getGitUpdateData: function () {
     return axios.get(`https://api.github.com/users/gusvalenzuela/repos`);
-    // return axios.get(`https://api.github.com/users/gusvalenzuela/${repo}/events`)
   },
   sendContactEmail: function (data) {
     return axios.post(`/api/sendmail`, data);
