@@ -160,7 +160,7 @@ function Portfolio() {
                   : ""}
               </p>
 
-              <p style={{ color: "#ffffffa4" }}>{Project.libraries}</p>
+              <p style={{ color: "#ffffffa4" }}>{Project.technologies}</p>
               <p style={{ fontSize: "1.1rem" }}>{Project.lead}</p>
 
               <a
