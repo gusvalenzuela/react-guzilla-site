@@ -5,8 +5,7 @@
   margin-right: 0em;
   right: 0;
   top: 75px;
-  background: var(--color2);
-  /* opacity: .9; */
+  background: var(--main-red);
   cursor: pointer;
   padding: 3.145rem 0.5rem 3.145rem .25rem;
   outline-color: transparent !important;

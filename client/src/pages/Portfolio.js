@@ -3,7 +3,7 @@ import moment from "moment";
 import API from "../utils/API";
 import "./mainstyle.css";
 import Card from "../components/Card";
-import { Dimmer, Loader, Icon} from "semantic-ui-react";
+import { Dimmer, Loader, Icon } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
 import ResumeCard from "../components/ResumeCard";
@@ -38,10 +38,12 @@ function Portfolio() {
       delete i._id;
       return i;
     });
-    localStorage.setItem(
-      `gusvalenzuela.com-cache-v${PortfolioVersion}-projects`,
-      JSON.stringify(sanitizedProjects)
-    );
+
+    return sanitizedProjects;
+    // localStorage.setItem(
+    //   `gusvalenzuela.com-cache-v${PortfolioVersion}-projects`,
+    //   JSON.stringify(sanitizedProjects)
+    // );
   }
   function clearOldProjectsCache() {
     for (let i = 0; i < PortfolioVersion; i++) {
@@ -99,7 +101,6 @@ function Portfolio() {
         });
         setProjects(Projects); // set projects to local or pulled Projects after updating with git data
       }
-
     });
   }
 
@@ -154,7 +155,9 @@ function Portfolio() {
             <Card key={index} imgSrc={Project.img_src}>
               <h2>{Project.title}</h2>
               <p style={{ float: "right", color: "#ffffffa4" }}>
-                {Project.updated_at ? `Updated ${moment(Project.updated_at).fromNow()}` : ""}
+                {Project.updated_at
+                  ? `Updated ${moment(Project.updated_at).fromNow()}`
+                  : ""}
               </p>
 
               <p style={{ color: "#ffffffa4" }}>{Project.libraries}</p>
@@ -165,7 +168,7 @@ function Portfolio() {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Icon name="chevron circle right" > open</Icon>
+                <Icon name="chevron circle right"> open</Icon>
               </a>
               <a
                 href={Project.repo_url}
