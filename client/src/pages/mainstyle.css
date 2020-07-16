@@ -117,9 +117,9 @@ body {
 
 .callout-index {
   position: relative;
-  height: 100%;
   background: linear-gradient(#d5edea, #001f58);
   background-image: url(../images/godzilla-2.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: 69.999% 20%;
   padding: 0 !important;
