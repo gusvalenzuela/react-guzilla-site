@@ -1,6 +1,6 @@
 .footer {
   background: var(--main-black);
-  box-shadow: 0 -5px 5px -5px rgb(0, 0, 0);
+  box-shadow: 0 -2px 10px 0px #0000007a;
   padding: 2.25rem 2.25rem 3.375em;
   height: 7.063rem;
   display: -webkit-flex;

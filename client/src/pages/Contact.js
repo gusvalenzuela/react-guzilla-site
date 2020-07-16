@@ -152,7 +152,7 @@ function Contact() {
           />
         </div>
       </Form>
-      <section style={{ textAlign: "center", marginTop: "1rem" }}>
+      <section style={{ textAlign: "center", margin: "2.25rem 0" }}>
         <p>Alternatively,</p>
         <div className="contact-page-icons">
           <Button
