@@ -141,15 +141,15 @@ function Portfolio() {
 
   return projects.length ? (
     <>
-      <div
+      <main
         onClick={() => {
           setKC("run");
           KonamiCode = [];
         }}
         role="main"
-        className="container-fluid p-0"
+        className="container-fluid p-0 portfolio"
       >
-        <div className="row justify-content-end m-0 portfolio">
+        <div className="row justify-content-end m-0">
           {projects.map((Project, index) => (
             // card requires a key [has default image src "defaultimage01.jpg" if none given]
             <Card key={index} imgSrc={Project.img_src}>
@@ -182,7 +182,7 @@ function Portfolio() {
           ))}
           <ResumeCard />
         </div>
-      </div>
+      </main>
     </>
   ) : (
     <Dimmer role="dialog" active>

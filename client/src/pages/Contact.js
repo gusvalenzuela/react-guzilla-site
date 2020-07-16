@@ -45,7 +45,7 @@ function Contact() {
     }
   }
   return (
-    <div id="contact-container">
+    <main id="contact-container">
       <Form action="#" className="contact-form" id="contact-form">
         <h2>Send an email:</h2>
         <Form.Field>
@@ -193,7 +193,7 @@ function Contact() {
           />
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 

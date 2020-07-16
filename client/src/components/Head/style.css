@@ -1,15 +1,14 @@
 .head {
-  margin: auto;
-  z-index: 7;
+  z-index: 1;
   padding: 100px 3.36rem 0 0;
   font-size: 1.5rem;
   text-align: right;
   background: var(--main-black);
   color: #ffffffff;
-  min-height: 142px;
+  min-height: 169px;
   /* background: url(../../images/name-header-white-7.png), var(--main-black); */
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
 }
 .head::before {
   content: "grv //";

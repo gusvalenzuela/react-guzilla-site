@@ -38,8 +38,8 @@ $color5: #e4c5afff;
 
 html,
 body {
-  min-height: 100%;
-  background: var(--main-black);
+  /* min-height: 100%; */
+  background: var(--main-black) !important;
 }
 /* .resume-modal-iframe{
   height: 92%;
@@ -196,7 +196,7 @@ body {
 }
 
 .text-link {
-  color: #4183c4!important;
+  color: #4183c4 !important;
   font-weight: 600 !important;
 }
 
@@ -316,21 +316,34 @@ body {
 #contact-container {
   background: var(--color-white) !important;
   color: var(--main-black) !important;
-  height: 100% !important;
+  /* height: 100% !important; */
 }
 .display-error {
   border: 1px var(--main-red) solid !important;
   transition: ease-out 1.25s;
 }
 
+div[role="navigation"] {
+  background: var(--color-white);
+  color: #030303;
+  margin: 0;
+}
+/* container holding main, footer, and  header */
+.grid-root {
+  display: grid !important;
+  height: 100vh !important;
+  grid-template-rows: auto 1fr auto !important;
+  /* min-height: 100%; */
+}
+
 div[role="main"] {
   background: var(--color-white) !important;
   color: #ffffff !important;
 }
-div[role="main"] > .portfolio {
-  background: var(--main-black) !important;
+main.portfolio {
+  background: var(--color5) !important;
   color: #ffffff !important;
-  padding: 3.375rem 1rem;
+  padding: 3.375rem 1rem !important;
 }
 div[role="dialog"] {
   background: var(--main-black) !important;
@@ -349,7 +362,7 @@ div[role="dialog"] {
     bottom: 1.5rem;
     right: 1.5rem;
   }
-  .portfolio {
+  main.portfolio {
     padding: 0 !important;
   }
   .profile-photo {
