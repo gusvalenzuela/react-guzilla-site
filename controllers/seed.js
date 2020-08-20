@@ -33,7 +33,7 @@ module.exports = {
         "Web application for searching cities and displaying their weather data.",
       technologies: "JS, jQuery, HTML, CSS",
       description: "",
-      app_url: "https://gusvalenzuela.github.io/weather-youLikeIt-orNot/",
+      app_url: "https://weather.gusvalenzuela.com",
       repo_url: "https://github.com/gusvalenzuela/weather-youLikeIt-orNot",
       repo_name: "weather-youLikeIt-orNot",
       img_src: "weather-app-1.jpg",
