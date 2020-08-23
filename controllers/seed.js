@@ -14,6 +14,19 @@ module.exports = {
       img_alt: "Screenshot of application",
     },
     {
+      title: "Fun with Sports!",
+      version: "0.3.2",
+      lead:
+        "Web application where users make 'picks' against the betting odds from weekly matchups of sport's leagues (e.g. NFL). Register, login, and see how you fare!",
+      technologies: "NextJS, React, MongoDB, JSX/JS, CSS",
+      description: "",
+      app_url: "https://fws.gusvalenzuela.com",
+      repo_url: "https://github.com/gusvalenzuela/fws-app",
+      repo_name: "fws-app",
+      img_src: "fun-with-sports-1.jpg",
+      img_alt: "Screenshot of application",
+    },
+    {
       title: "Workday Planner",
       version: "2.0.1",
       lead: "A simple calendar app for scheduling your work day.",
