@@ -6,22 +6,22 @@ function Nav() {
     <nav className="sidenavbar" id="sidenavbar">
       <ul className="navbar-nav">
         <li className="">
-          <a className="navbar-togglerz" href="/">
+          <a className="navbar-links" href="/">
             home,
           </a>
         </li>
         <li className="">
-          <a className="navbar-togglerz" href="/#about-me">
+          <a className="navbar-links" href="/#about-me">
             about,
           </a>
         </li>
         <li>
-          <a className="navbar-togglerz" href="/portfolio">
+          <a className="navbar-links" href="/portfolio">
             portfolio,
           </a>
         </li>
         <li>
-          <a className="navbar-togglerz" href="/contact">
+          <a className="navbar-links" href="/contact">
             contact.
           </a>
         </li>

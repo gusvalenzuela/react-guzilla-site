@@ -45,7 +45,7 @@ function Contact() {
     }
   }
   return (
-    <div id="contact-container">
+    <main id="contact-container">
       <Form action="#" className="contact-form" id="contact-form">
         <h2>Send an email:</h2>
         <Form.Field>
@@ -152,7 +152,7 @@ function Contact() {
           />
         </div>
       </Form>
-      <section style={{ textAlign: "center", marginTop: "1rem" }}>
+      <section style={{ textAlign: "center", margin: "2.25rem 0" }}>
         <p>Alternatively,</p>
         <div className="contact-page-icons">
           <Button
@@ -193,7 +193,7 @@ function Contact() {
           />
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 

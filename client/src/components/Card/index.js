@@ -6,12 +6,12 @@ import 'lazysizes';
 
 function Card({height, imgSrc, children }) {
   return (
-    <div className="card col-12 col-md-5 col-lg-3">
+    <div className="card-portfolio">
       <img
         className="card-image lazyload"
         data-src={`./assets/images/${imgSrc ? imgSrc : "defaultimage01.jpg"}`}
         alt="Serene stock background"
-        style={height ? { height: height } : { minHeight: 400 }}
+        style={height ? { height: height } : {}}
       />
       <div className="card-img-overlay">{children}</div>
     </div>

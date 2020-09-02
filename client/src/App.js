@@ -45,7 +45,7 @@ function App() {
   }
   return (
     <Router>
-      <div>
+      <div className="app-root">
         <Sidebar
           sidebar={<Nav />}
           open={smallScreen ? sideNavOpen : false}
@@ -54,42 +54,44 @@ function App() {
           pullRight={true}
           styles={{ sidebar: { background: "#eeeeee" } }}
         >
+          <div className="grid-root">
+            <Switch>
+              <Route exact path="/">
+                <Head textContent="HOME" />
+                <Homepage
+                  windowHeight={windowHeight}
+                  smallScreen={smallScreen}
+                  windowWidth={
+                    smallScreen || !sideNavOpen
+                      ? windowWidth - 32
+                      : windowWidth - 180
+                  }
+                />
+              </Route>
+              <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
+                <Head textContent="PORTFOLIO" />
+                <Portfolio />
+              </Route>
+              <Route exact path={["/contact", "/contactme"]}>
+                <Head textContent="CONTACT ME" />
+                <Contact />
+              </Route>
+              <Route exact path={"/other"}>
+                <Head textContent="OTHER!" />
+                <Other />
+              </Route>
+              <Route>
+                <Head textContent="UH-OH!" />
+                <NoMatch />
+              </Route>
+            </Switch>
+            <Foot />
+          </div>
           <SidebarToggle
             isOpen={sideNavOpen}
             smallScreen={smallScreen}
             handleOpeningSidebar={() => handleOpeningSidebar()}
           />
-          <Switch>
-            <Route exact path="/">
-              <Head textContent="HOME" />
-              <Homepage
-                windowHeight={windowHeight}
-                smallScreen={smallScreen}
-                windowWidth={
-                  smallScreen || !sideNavOpen
-                    ? windowWidth - 32
-                    : windowWidth - 180
-                }
-              />
-            </Route>
-            <Route exact path={["/portfolio", "/portfolios", "/projects"]}>
-              <Head textContent="PORTFOLIO" />
-              <Portfolio />
-            </Route>
-            <Route exact path={["/contact", "/contactme"]}>
-              <Head textContent="CONTACT ME" />
-              <Contact />
-            </Route>
-            <Route exact path={"/other"}>
-              <Head textContent="OTHER!" />
-              <Other />
-            </Route>
-            <Route>
-              <Head textContent="UH-OH!" />
-              <NoMatch />
-            </Route>
-          </Switch>
-          <Foot />
         </Sidebar>
       </div>
     </Router>

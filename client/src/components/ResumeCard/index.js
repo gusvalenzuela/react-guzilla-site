@@ -5,7 +5,7 @@ import { List } from "semantic-ui-react";
 
 function ResumeCard() {
   return (
-    <div className="card-semantic col-12 col-md-10 col-xl-6">
+    <div className="card-semantic">
       <h3>Want to reach me?</h3>
 
       <p>
