@@ -1,6 +1,19 @@
 module.exports = {
   projectsSeed: [
     {
+      title: "Fun with Sports!",
+      version: "0.3.2",
+      lead:
+        "Web application where users make 'picks' against the betting odds from weekly matchups of sport's leagues (e.g. NFL). Register, login, and see how you fare!",
+      technologies: "NextJS, React, MongoDB, JSX/JS, CSS",
+      description: "",
+      app_url: "https://fws.gusvalenzuela.com",
+      repo_url: "https://github.com/gusvalenzuela/fws-app",
+      repo_name: "fws-app",
+      img_src: "fun-with-sports-1.jpg",
+      img_alt: "Screenshot of application",
+    },
+    {
       title: "QuizDown\u2049",
       version: "5.0.0",
       lead:
@@ -14,17 +27,31 @@ module.exports = {
       img_alt: "Screenshot of application",
     },
     {
-      title: "Fun with Sports!",
-      version: "0.3.2",
-      lead:
-        "Web application where users make 'picks' against the betting odds from weekly matchups of sport's leagues (e.g. NFL). Register, login, and see how you fare!",
-      technologies: "NextJS, React, MongoDB, JSX/JS, CSS",
-      description: "",
-      app_url: "https://fws.gusvalenzuela.com",
-      repo_url: "https://github.com/gusvalenzuela/fws-app",
-      repo_name: "fws-app",
-      img_src: "fun-with-sports-1.jpg",
+      title: "Password Generator",
+      version: "1.2.1",
+      lead: "A plain string generator with user options",
+      technologies: "JS, HTML, CSS",
+      description:
+        'In this day and age password security is very important and having unique passwords for all accounts is best practice. In order to facilitate this practice, my password generator randomly picks from a "pool" of lower case, upper case, special case, and/or number characters and dynamically creates a string - "password" - of 8 to 128 characters long (the longer the better!). You can then take this newly created "password" and use it as you wish. Enjoy!',
+      app_url: "https://gusvalenzuela.github.io/pswd-generator/",
+      repo_url: "https://github.com/gusvalenzuela/pswd-generator",
+      repo_name: "pswd-generator",
+      img_src: "password-gen-1.jpg",
       img_alt: "Screenshot of application",
+    },
+
+    {
+      title: "Weather App",
+      version: "1.0.0",
+      lead:
+        "Web application for searching cities and displaying their weather data.",
+      technologies: "JS, jQuery, HTML, CSS",
+      description: "",
+      app_url: "https://weather.gusvalenzuela.com",
+      repo_url: "https://github.com/gusvalenzuela/weather-youLikeIt-orNot",
+      repo_name: "weather-youLikeIt-orNot",
+      img_src: "weather-app-1.jpg",
+      img_alt: "Screenshot of Weather Application",
     },
     {
       title: "Workday Planner",
@@ -40,18 +67,33 @@ module.exports = {
       img_alt: "Screenshot of application",
     },
     {
-      title: "Weather App",
-      version: "1.0.0",
+      title: "artGarden",
+      version: "0.33.4",
       lead:
-        "Web application for searching cities and displaying their weather data.",
-      technologies: "JS, jQuery, HTML, CSS",
-      description: "",
-      app_url: "https://weather.gusvalenzuela.com",
-      repo_url: "https://github.com/gusvalenzuela/weather-youLikeIt-orNot",
-      repo_name: "weather-youLikeIt-orNot",
-      img_src: "weather-app-1.jpg",
-      img_alt: "Screenshot of Weather Application",
+        "A site where users can make requests for artworks to be made and other users can make a proposal to fulfill that request.",
+      technologies: "NodeJS, Handlebars, MySQL, CSS",
+      description:
+        "artGarden™ is for new artists who have trouble breaking into the art sphere. artGarden gives equal opportunity for paid gigs to new and established artists by allowing them to connect to potential clients through a unique bidding platform. Unlike other gig marketplace platforms, artGarden allows any registered artist to view and bid on user art commissions, giving the client the ability to set the price point while also giving lesser known artists a chance at taking on a commission that otherwise might not be accessible.",
+      app_url: "https://artgarden.herokuapp.com/",
+      repo_url: "https://github.com/gusvalenzuela/art-garden-bc",
+      repo_name: "art-garden-bc",
+      img_src: "artgarden-1.jpg",
+      img_alt: "Screenshot of application",
     },
+    {
+      title: "MetaPhoto",
+      version: "0.18.4",
+      lead:
+        "A website where users can upload their personal rock climbing photos and share the location of the climb shown. Upload and share your rock climbing adventures with us at MetaPhoto!",
+      technologies: "MongoDb, Express, React, NodeJS, HTML, CSS",
+      description: "",
+      app_url: "https://metaphotojs.herokuapp.com/",
+      repo_url: "https://github.com/MastadonRising/MetaPhoto",
+      repo_name: "MetaPhoto",
+      img_src: "metaphoto-1.jpg",
+      img_alt: "Screenshot of application",
+    },
+
     {
       title: "Gooder Burger",
       version: "3.0.10",
@@ -64,34 +106,6 @@ module.exports = {
       repo_url: "https://github.com/gusvalenzuela/great-burger-tracker-app",
       repo_name: "great-burger-tracker-app",
       img_src: "gooder-burger-1.jpg",
-      img_alt: "Screenshot of application",
-    },
-    // {
-    //   title: "MetaPhoto",
-    //   version: "0.18.4",
-    //   lead:
-    //     "",
-    //   technologies: "MongoDb, Express, React, NodeJS, HTML, CSS",
-    //   description:
-    //     "",
-    //   app_url: "https://metaphotojs.herokuapp.com/",
-    //   repo_url: "https://github.com/gusvalenzuela/MetaPhoto",
-    //   repo_name: "MetaPhoto",
-    //   img_src: "metaphoto-1.jpg",
-    //   img_alt: "Screenshot of application",
-    // },
-    {
-      title: "artGarden",
-      version: "0.33.4",
-      lead:
-        "A site where users can make requests for artworks to be made and other users can make a proposal to fulfill that request.",
-      technologies: "NodeJS, Handlebars, MySQL, CSS",
-      description:
-        "artGarden™ is for new artists who have trouble breaking into the art sphere. artGarden gives equal opportunity for paid gigs to new and established artists by allowing them to connect to potential clients through a unique bidding platform. Unlike other gig marketplace platforms, artGarden allows any registered artist to view and bid on user art commissions, giving the client the ability to set the price point while also giving lesser known artists a chance at taking on a commission that otherwise might not be accessible.",
-      app_url: "https://artgarden.herokuapp.com/",
-      repo_url: "https://github.com/gusvalenzuela/art-garden-bc",
-      repo_name: "art-garden-bc",
-      img_src: "artgarden-1.jpg",
       img_alt: "Screenshot of application",
     },
     {
@@ -107,19 +121,7 @@ module.exports = {
       img_src: "employee-yp-1.jpg",
       img_alt: "Screenshot of EYP application",
     },
-    {
-      title: "Password Generator",
-      version: "1.2.1",
-      lead: "A plain string generator with user options",
-      technologies: "JS, HTML, CSS",
-      description:
-        'In this day and age password security is very important and having unique passwords for all accounts is best practice. In order to facilitate this practice, my password generator randomly picks from a "pool" of lower case, upper case, special case, and/or number characters and dynamically creates a string - "password" - of 8 to 128 characters long (the longer the better!). You can then take this newly created "password" and use it as you wish. Enjoy!',
-      app_url: "https://gusvalenzuela.github.io/pswd-generator/",
-      repo_url: "https://github.com/gusvalenzuela/pswd-generator",
-      repo_name: "pswd-generator",
-      img_src: "password-gen-1.jpg",
-      img_alt: "Screenshot of application",
-    },
+
     {
       title: "Money Trees",
       version: "2.0.0",
