@@ -77,7 +77,7 @@ function Homepage({ windowHeight, windowWidth, smallScreen }) {
             computers, and the world wide web. I made static webpages in my
             youth and even got to deploy some flash-centric wonders. Over the
             years my love of technology and computers only grew more powerful -
-            occassionally doing activites on FreeCodeCamp and taking computer
+            occasionally doing activities on FreeCodeCamp and taking computer
             science courses at the local community college. Most recently I
             completed a Coding Bootcamp, by Trilogy/UC Davis Continuing
             Education, earning a certificate in Full Stack Web Development. I
